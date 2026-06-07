@@ -21,17 +21,17 @@ const notoSans = Noto_Sans_SC({
 
 export const metadata: Metadata = {
   title: {
-    default: "灰糖家居 Grey Sugar Home - 简约北欧生活方式",
+    default: "灰糖家居 Grey Sugar Home - 好家具，不溢价",
     template: "%s | 灰糖家居 Grey Sugar Home",
   },
   description:
-    "灰糖家居，专注于简约、北欧风格的现代家居品牌。为您提供高品质的家具、家居饰品和装饰品，打造温馨舒适的生活空间。",
+    "灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。",
   keywords: [
     "灰糖家居",
-    "北欧风格",
-    "简约家居",
-    "现代家具",
-    "家居装饰",
+    "高定家具",
+    "家具",
+    "家居",
+    "成都家具",
     "Grey Sugar Home",
   ],
   authors: [{ name: "灰糖家居" }],
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     url: "https://greysugarhome.com",
     siteName: "灰糖家居",
-    title: "灰糖家居 Grey Sugar Home - 简约北欧生活方式",
+    title: "灰糖家居 Grey Sugar Home - 好家具，不溢价",
     description:
-      "灰糖家居，专注于简约、北欧风格的现代家居品牌。",
+      "灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。",
   },
   robots: {
     index: true,
@@ -135,8 +135,9 @@ export default function RootLayout({
                   灰糖家居
                 </h3>
                 <p className="text-gray-600 max-w-md">
-                  灰糖家居致力于为追求品质生活的人群提供简约、北欧风格的现代家居产品。我们相信，好的设计可以让生活更美好。
+                  "灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品
                 </p>
+                <p className="text-accent font-medium mt-4">好家具，不溢价</p>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-4">快速链接</h4>
@@ -164,11 +165,11 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-4">联系我们</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">展厅地址</h4>
                 <ul className="space-y-2 text-gray-600">
-                  <li>邮箱: hello@greysugarhome.com</li>
-                  <li>电话: 400-888-8888</li>
-                  <li>地址: 上海市静安区</li>
+                  <li>成都太古里</li>
+                  <li>新南路40号院</li>
+                  <li className="text-sm text-gray-500">导航搜索"灰糖家居"</li>
                 </ul>
               </div>
             </div>

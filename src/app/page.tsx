@@ -11,10 +11,10 @@ export default function HomePage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h1 className="heading-1 text-gray-900 mb-6 animate-fade-in">
-            简约，是一种态度
+            好家具，不溢价
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            灰糖家居，为您打造温馨、舒适、有品质的生活空间。北欧设计，匠心工艺。
+            "灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Link href="/products" className="btn-primary">
@@ -39,19 +39,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "北欧设计",
-                description: "源自北欧的简约美学，每一件产品都经过精心设计，兼具美观与实用。",
+                title: "高定工艺",
+                description: "精选优质材料，精湛工艺，打造持久耐用的家居产品。",
                 icon: "🎨",
               },
               {
                 title: "匠心工艺",
-                description: "精选优质材料，传统工艺与现代技术相结合，打造持久耐用的家居产品。",
+                description: "传统工艺与现代技术相结合，每一个细节都经过精心打磨。",
                 icon: "🪵",
               },
               {
-                title: "环保理念",
-                description: "我们致力于可持续发展，选用环保材料，减少对环境的影响。",
-                icon: "🌱",
+                title: "品质保证",
+                description: "严格的质量控制体系，确保每一件产品都达到高标准。",
+                icon: "✨",
               },
             ].map((feature, index) => (
               <div key={index} className="card p-8 text-center">
@@ -88,11 +88,9 @@ export default function HomePage() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium mb-1">
-                    {["极简沙发系列", "北欧餐桌椅", "创意灯具", "舒适床品"][item - 1]}
+                    {["沙发系列", "餐桌椅系列", "灯具系列", "床品系列"][item - 1]}
                   </h3>
-                  <p className="text-accent font-semibold">
-                    ¥{["3,980", "2,680", "899", "1,580"][item - 1]}
-                  </p>
+                  <p className="text-gray-500 text-sm">正在搭建中</p>
                 </div>
               </div>
             ))}
@@ -100,22 +98,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brand Story Preview */}
+      {/* Location Section */}
       <section className="section-spacing bg-white">
         <div className="container-main">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-accent font-medium mb-4 block">品牌故事</span>
-              <h2 className="heading-2 mb-6">源于对美好生活的追求</h2>
+              <span className="text-accent font-medium mb-4 block">展厅地址</span>
+              <h2 className="heading-2 mb-6">欢迎到店体验</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                灰糖家居成立于2018年，创始团队由一群热爱设计和生活的年轻人组成。我们相信，家是心灵的港湾，值得被用心对待。
+                我们位于成都太古里的展厅，诚邀您莅临体验我们精心打造的高定家具。
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                我们走遍北欧各国，寻访当地的工匠和设计师，将北欧的简约美学与中国的居住习惯相结合，打造出适合中国家庭的家居产品。
-              </p>
-              <Link href="/brand" className="btn-secondary">
-                阅读更多故事
-              </Link>
+              <div className="bg-gray-50 rounded-xl p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="text-2xl">📍</span>
+                  <div>
+                    <p className="font-medium mb-1">地址</p>
+                    <p className="text-gray-600">成都太古里，新南路40号院</p>
+                    <p className="text-gray-500 text-sm mt-1">导航搜索"灰糖家居"</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
