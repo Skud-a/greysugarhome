@@ -1,13 +1,13 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "outputDirectory": "out",
+  "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "regions": ["sin1"],
+  "regions": ["iad1"],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -18,39 +18,12 @@
           "value": "DENY"
         },
         {
-          "key": "X-XSS-Protection",
+          key: "X-XSS-Protection",
           "value": "1; mode=block"
         },
         {
-          "key": "Referrer-Policy",
+          key: "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).png",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).jpg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).svg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
