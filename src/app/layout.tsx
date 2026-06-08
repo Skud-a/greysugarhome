@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | 灰糖家居 Grey Sugar Home",
   },
   description:
-    "灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。",
+    '灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。',
   keywords: [
     "灰糖家居",
     "高定家具",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "灰糖家居",
     title: "灰糖家居 Grey Sugar Home - 好家具，不溢价",
     description:
-      "灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。",
+      '灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。',
   },
   robots: {
     index: true,
