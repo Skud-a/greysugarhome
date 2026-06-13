@@ -1,95 +1,175 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BrandPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container-main text-center">
-          <span className="text-accent font-medium mb-4 block">Brand Story</span>
-          <h1 className="heading-1 text-white mb-6">品牌故事</h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            好家具，不溢价
+      <section className="py-32 bg-gray-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-xs tracking-[0.3em] text-gray-500 uppercase mb-8">Brand Story</p>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8">
+            品牌故事
+          </h1>
+          <p className="text-xl text-gray-400 leading-relaxed">
+            大家好，我是老罗。
           </p>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="section-spacing bg-white">
-        <div className="container-main">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-16">
-              <span className="text-accent font-medium mb-4 block">01 / 理念</span>
-              <h2 className="heading-2 mb-6">我们的信念</h2>
-              <div className="prose prose-lg">
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  灰糖家居相信，好的家具不应该被过高的品牌溢价所绑架。我们致力于为城市精英提供真正高品质的家居产品，通过精简中间环节、优化供应链，让更多人能够享受到高品质的家居生活。
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  "好家具，不溢价" —— 这是我们对每一位客户的承诺。
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-8 mb-16">
-              <blockquote className="text-2xl font-serif text-gray-800 italic mb-4">
-                "让更多人享受高品质家居，是我们不变的追求。"
-              </blockquote>
-              <cite className="text-gray-500">—— 灰糖家居</cite>
-            </div>
-
-            <div className="mb-16">
-              <span className="text-accent font-medium mb-4 block">02 / 品质</span>
-              <h2 className="heading-2 mb-6">品质与服务</h2>
-              <div className="prose prose-lg">
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  我们深知，家居产品是陪伴家人多年的重要物品。因此，我们对品质有着近乎苛刻的要求。每一件产品都经过严格的质检，确保到您手中的都是精品。
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  我们提供完善的售后服务，让每一位客户都能放心购买，无忧使用。
-                </p>
-              </div>
+      {/* Origin */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-16">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">01 / 起源</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
+              灰糖的诞生
+            </h2>
+            <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+              <p>
+                2018年夏天，灰糖公众号成立。
+              </p>
+              <p>
+                2019年7月，灰糖公司正式成立。
+              </p>
+              <p>
+                2020年春天，灰糖家居正式立项。
+              </p>
+              <p>
+                2022年秋天，灰糖家居正式成立，与大家见面。
+              </p>
+              <p>
+                2024年5月，新展厅完成。
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Values */}
-      <section className="section-spacing bg-gray-50">
-        <div className="container-main">
-          <h2 className="heading-2 mb-12 text-center">我们的价值观</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Timeline */}
+          <div className="border-l-2 border-gray-200 pl-8 space-y-12">
             {[
-              { title: "品质", desc: "精选用料，精湛工艺" },
-              { title: "真诚", desc: "去除溢价，真实定价" },
-              { title: "服务", desc: "贴心售后，用户至上" },
-            ].map((value, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-accent">0{i + 1}</span>
-                </div>
-                <h3 className="heading-3 mb-2">{value.title}</h3>
-                <p className="text-gray-600">{value.desc}</p>
+              { year: "2018.7", event: "灰糖公众号成立", detail: "一切从这里开始" },
+              { year: "2019.7", event: "灰糖公司正式成立", detail: "从内容到实体" },
+              { year: "2020春", event: "灰糖家居立项", detail: "正式进入家居行业" },
+              { year: "2022秋", event: "灰糖家居正式成立", detail: "3年打磨，终于与大家见面" },
+              { year: "2024.5", event: "新展厅完成", detail: "成都太古里，2000㎡旗舰展厅" },
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-900 border-4 border-white"></div>
+                <div className="text-sm text-gray-400 mb-1">{item.year}</div>
+                <div className="text-lg font-semibold text-gray-900">{item.event}</div>
+                <div className="text-gray-500 text-sm mt-1">{item.detail}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Philosophy */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">02 / 理念</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
+            抱歉，不打折
+          </h2>
+          <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
+            <p>
+              <strong className="text-gray-900">定价原则：</strong>不打折、不做活动、不接受还价。
+            </p>
+            <p>
+              <strong className="text-gray-900">为什么？</strong>折扣是价格的敌人，是对已购用户的不公平，是品牌溢价最丑陋的部分。
+            </p>
+            <p>
+              <strong className="text-gray-900">我们的保证：</strong>从不进行价格欺诈、从不制造虚假促销、从不让人吃亏。
+            </p>
+          </div>
+
+          <div className="mt-16 bg-white rounded-2xl p-10 border border-gray-100">
+            <blockquote className="text-2xl font-serif text-gray-800 leading-relaxed italic">
+              "魑魅魍魉的营销也好，铺天盖地的短视频也好，妖魔鬼怪的剧本演绎也好。不过都是没有价值的快餐罢了。终究留下的，只有那件可以陪伴你很久的家具。仅此而已。"
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Insight */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">03 / 洞察</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
+            市场真相
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { stat: "200%", label: "高端市场溢价是常态", desc: "品牌溢价远超产品本身价值" },
+              { stat: "90%", label: "优质订单出口欧美日韩", desc: "最好的工厂产能被海外品牌占据" },
+              { stat: "0", label: "市场空缺", desc: "想找好家具的人，找不到，找到了买不起" },
+            ].map((item, i) => (
+              <div key={i} className="border border-gray-100 rounded-2xl p-8">
+                <div className="text-4xl font-serif font-bold text-gray-900 mb-4">{item.stat}</div>
+                <div className="font-medium text-gray-900 mb-2">{item.label}</div>
+                <div className="text-sm text-gray-500">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rebel */}
+      <section className="py-24 bg-gray-950 text-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-500 uppercase mb-6">04 / 态度</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12">
+            叛逆者的坚持
+          </h2>
+          <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+            <p>灰糖在行业里是"叛逆"的：</p>
+            <div className="space-y-4">
+              <p className="border-l-2 border-gray-600 pl-6">
+                好货，却卖这么便宜？——<strong className="text-white">叛逆！</strong>
+              </p>
+              <p className="border-l-2 border-gray-600 pl-6">
+                不打折，不做活动？——<strong className="text-white">叛逆！</strong>
+              </p>
+              <p className="border-l-2 border-gray-600 pl-6">
+                拒绝渠道合作？——<strong className="text-white">叛逆！</strong>
+              </p>
+            </div>
+            <p className="text-gray-400 mt-12 leading-relaxed">
+              "叛逆在这里变成了一个褒义词。相信我们心中依然保持着一种对所爱事务的执着。心中那团火焰，从未熄灭过。坚持自己所坚持的，知行合一。"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Positioning */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">Positioning</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
+            高端家具，不溢价
+          </h2>
+          <p className="text-gray-500 text-lg">Grey Sugar Home</p>
+          <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+            <span className="px-4 py-2 border border-gray-200 rounded-full">佛山 · 生产基地</span>
+            <span className="px-4 py-2 border border-gray-200 rounded-full">东莞 · 生产基地</span>
+            <span className="px-4 py-2 border border-gray-200 rounded-full">深圳 · 生产基地</span>
+            <span className="px-4 py-2 border border-gray-200 rounded-full">成都 · 旗舰展厅</span>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-16 bg-white border-t border-gray-100">
-        <div className="container-main text-center">
-          <h2 className="heading-2 mb-4">欢迎到店体验</h2>
-          <p className="text-gray-600 mb-4 max-w-xl mx-auto">
-            成都太古里，新南路40号院
-          </p>
+      <section className="py-20 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">欢迎到店体验</h2>
+          <p className="text-gray-600 mb-2">成都太古里，新南路40号院</p>
           <p className="text-gray-500 text-sm mb-8">导航搜索"灰糖家居"</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/about" className="btn-primary">
-              了解更多
+            <Link href="/showroom" className="btn-primary">
+              展厅详情
             </Link>
-            <Link href="/products" className="btn-secondary">
-              浏览产品
+            <Link href="/craftsmanship" className="btn-secondary">
+              高定工艺
             </Link>
           </div>
         </div>

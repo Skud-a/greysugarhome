@@ -22,17 +22,18 @@ const notoSans = Noto_Sans_SC({
 export const metadata: Metadata = {
   title: {
     default: "灰糖家居 Grey Sugar Home - 好家具，不溢价",
-    template: "%s | 灰糖家居 Grey Sugar Home",
+    template: "%s | 灰糖家居",
   },
   description:
-    '灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。',
+    "灰糖家居，高定家具品牌。好家具，不溢价。成都太古里2000㎡旗舰展厅，30个独立设计分区，所见即所得。",
   keywords: [
     "灰糖家居",
     "高定家具",
-    "家具",
-    "家居",
+    "不打折",
     "成都家具",
     "Grey Sugar Home",
+    "高端家具",
+    "家具不溢价",
   ],
   authors: [{ name: "灰糖家居" }],
   openGraph: {
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     url: "https://greysugarhome.com",
     siteName: "灰糖家居",
-    title: "灰糖家居 Grey Sugar Home - 好家具，不溢价",
+    title: "灰糖家居 - 好家具，不溢价",
     description:
-      '灰糖家居，"灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品。',
+      "灰糖家居，高定家具品牌。好家具，不溢价。成都太古里2000㎡旗舰展厅。",
   },
   robots: {
     index: true,
@@ -67,50 +68,58 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${notoSerif.variable} ${notoSans.variable} font-sans antialiased bg-white text-gray-900`}
       >
-        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              <a href="/" className="flex items-center gap-2">
-                <span className="text-2xl font-serif font-bold text-gray-900">
-                  灰糖
+              <a href="/" className="flex items-center gap-3">
+                <span className="text-xl font-serif font-bold text-gray-900 tracking-tight">
+                  灰糖家居
                 </span>
-                <span className="text-sm text-gray-500">Grey Sugar</span>
+                <span className="text-xs text-gray-400 hidden sm:inline">
+                  GREY SUGAR HOME
+                </span>
               </a>
-              <div className="hidden md:flex items-center gap-8">
+              <div className="hidden md:flex items-center gap-7">
                 <a
                   href="/"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   首页
                 </a>
                 <a
-                  href="/products"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
-                >
-                  产品
-                </a>
-                <a
                   href="/brand"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  品牌
+                  品牌故事
                 </a>
                 <a
-                  href="/faq"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  href="/showroom"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  FAQ
+                  展厅
+                </a>
+                <a
+                  href="/supply-chain"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  供应链溯源
+                </a>
+                <a
+                  href="/craftsmanship"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  高定工艺
                 </a>
                 <a
                   href="/about"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   关于
                 </a>
               </div>
               <button className="md:hidden p-2" aria-label="菜单">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -118,7 +127,7 @@ export default function RootLayout({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={1.5}
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
@@ -127,53 +136,62 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="bg-gray-50 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">
+        <footer className="bg-gray-950 text-gray-400">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div>
+                <h3 className="text-lg font-serif font-bold text-white mb-4">
                   灰糖家居
                 </h3>
-                <p className="text-gray-600 max-w-md">
-                  "灰糖"旗下高定家具品牌，为城市精英提供真正高品质的家居产品
+                <p className="text-sm leading-relaxed mb-4">
+                  好家具，不溢价。
+                  <br />
+                  好品质，不打折。
                 </p>
-                <p className="text-accent font-medium mt-4">好家具，不溢价</p>
+                <p className="text-xs text-gray-500">
+                  祝愿大家，也祝愿我们：
+                  <br />
+                  心中的热爱永远滚烫，
+                  <br />
+                  所有的坚持都听到回响。
+                </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-4">快速链接</h4>
-                <ul className="space-y-2 text-gray-600">
+                <h4 className="text-sm font-semibold text-white mb-4">快速链接</h4>
+                <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="/products" className="hover:text-gray-900">
-                      产品中心
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/brand" className="hover:text-gray-900">
+                    <a href="/brand" className="hover:text-white transition-colors">
                       品牌故事
                     </a>
                   </li>
                   <li>
-                    <a href="/about" className="hover:text-gray-900">
-                      关于我们
+                    <a href="/showroom" className="hover:text-white transition-colors">
+                      展厅体验
                     </a>
                   </li>
                   <li>
-                    <a href="/faq" className="hover:text-gray-900">
-                      常见问题
+                    <a href="/supply-chain" className="hover:text-white transition-colors">
+                      供应链溯源
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/craftsmanship" className="hover:text-white transition-colors">
+                      高定工艺
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-4">展厅地址</h4>
-                <ul className="space-y-2 text-gray-600">
+                <h4 className="text-sm font-semibold text-white mb-4">展厅地址</h4>
+                <ul className="space-y-2 text-sm">
                   <li>成都太古里</li>
                   <li>新南路40号院</li>
-                  <li className="text-sm text-gray-500">导航搜索"灰糖家居"</li>
+                  <li className="text-gray-500">导航搜索"灰糖家居"</li>
+                  <li className="text-gray-500">专属停车场 · 100个车位</li>
                 </ul>
               </div>
             </div>
-            <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
               © 2024 灰糖家居 Grey Sugar Home. All rights reserved.
             </div>
           </div>

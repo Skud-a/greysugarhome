@@ -1,60 +1,117 @@
 import Link from "next/link";
 
 const categories = [
-  { name: "客厅家具", icon: "🛋️", description: "沙发、茶几、电视柜" },
-  { name: "餐厅家具", icon: "🍽️", description: "餐桌、餐椅、餐边柜" },
-  { name: "卧室家具", icon: "🛏️", description: "床、床头柜、衣柜" },
-  { name: "书房家具", icon: "📚", description: "书桌、书椅、书架" },
-  { name: "灯具装饰", icon: "💡", description: "吊灯、落地灯、台灯" },
-  { name: "家居饰品", icon: "🖼️", description: "挂画、摆件、装饰画" },
+  {
+    name: "客厅 Living",
+    desc: "沙发、茶几、电视柜",
+    note: "高定工艺，所见即所得",
+  },
+  {
+    name: "餐厅 Dining",
+    desc: "餐桌、餐椅、餐边柜",
+    note: "精致工艺，品质生活",
+  },
+  {
+    name: "卧室 Sleeping",
+    desc: "床、床头柜",
+    note: "舒适睡眠，匠心打造",
+  },
 ];
 
 export default function ProductsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-main text-center">
-          <h1 className="heading-1 mb-4">产品中心</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <section className="py-32 bg-gray-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-xs tracking-[0.3em] text-gray-500 uppercase mb-8">Products</p>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8">
+            产品中心
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             高定工艺，品质保证
+            <br />
+            所见即所得，拒绝"见光死"
           </p>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-16 bg-white">
-        <div className="container-main">
-          <h2 className="heading-2 mb-8 text-center">产品分类</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((cat) => (
-              <button
-                key={cat.name}
-                className="card p-6 text-center hover:border-accent border-2 border-transparent transition-colors"
-              >
-                <span className="text-4xl mb-3 block">{cat.icon}</span>
-                <h3 className="font-medium mb-1">{cat.name}</h3>
-                <p className="text-sm text-gray-500">{cat.description}</p>
-              </button>
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">Categories</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
+              产品分类
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {categories.map((cat, i) => (
+              <div key={i} className="border border-gray-100 rounded-2xl p-10 text-center hover:border-gray-300 transition-colors">
+                <div className="text-xs text-gray-400 mb-4">0{i + 1}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{cat.name}</h3>
+                <p className="text-gray-500 text-sm mb-4">{cat.desc}</p>
+                <p className="text-xs text-gray-400">{cat.note}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Products Coming Soon */}
-      <section className="section-spacing bg-gray-50">
-        <div className="container-main">
-          <div className="max-w-2xl mx-auto">
-            <div className="card p-12 text-center">
-              <div className="text-6xl mb-6">🛋️</div>
-              <h2 className="heading-2 mb-4">产品正在搭建中</h2>
-              <p className="text-gray-600 mb-8">
-                我们正在精心准备产品信息，敬请期待
-              </p>
-              <Link href="/about" className="btn-primary">
-                了解我们
-              </Link>
-            </div>
+      {/* Craftsmanship Highlight */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">Why Choose Us</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+              为什么选择灰糖
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "9大高定工艺",
+                desc: "从内外套到看不见的细节，每一项工艺都经过严格把控",
+              },
+              {
+                title: "120,000公里溯源",
+                desc: "3年飞行12万公里，从源头找到最好的材料",
+              },
+              {
+                title: "所见即所得",
+                desc: "展厅看到的产品就是你收到的产品，拒绝效果图与实物不符",
+              },
+              {
+                title: "不打折不溢价",
+                desc: "明码实价，去除品牌溢价，让好家具回归合理价格",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100">
+                <div className="text-xs text-gray-400 mb-3">0{i + 1}</div>
+                <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-gray-950 text-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-serif font-bold mb-4">
+            产品详情正在完善中
+          </h2>
+          <p className="text-gray-400 mb-8">
+            欢迎到成都太古里展厅体验实物
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/showroom" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">
+              预约展厅
+            </Link>
+            <Link href="/craftsmanship" className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-gray-300 rounded-full text-sm font-medium hover:border-white hover:text-white transition-colors">
+              高定工艺
+            </Link>
           </div>
         </div>
       </section>
