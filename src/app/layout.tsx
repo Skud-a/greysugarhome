@@ -58,6 +58,37 @@ export const metadata: Metadata = {
   },
 };
 
+// Organization Schema (全站根目录)
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "灰糖家居",
+  alternateName: "GreySugar Home",
+  url: "https://greysugarhome.com",
+  logo: "https://greysugarhome.com/logo.png",
+  slogan: "好家具，不溢价",
+  description:
+    "成都本土的中高端成品家具与软装设计品牌，专注客厅、餐厅、卧室三大品类，100%自营，坚持'抱歉，不打折'的统一价格承诺。供应链关键节点公开披露：阳江皮厂真皮、德国杜克普缝线、意大利因特思绑带、深圳超一流五金、榉木弯板。",
+  foundingDate: "2022-09",
+  founder: {
+    "@type": "Person",
+    name: "老罗",
+    alternateName: "老罗真会装",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "新南路40号院",
+    addressLocality: "成都",
+    addressRegion: "四川",
+    addressCountry: "CN",
+  },
+  sameAs: [
+    "【待 Skud 补充：公众号链接】",
+    "【待 Skud 补充：B站老罗真会装链接】",
+    "【待 Skud 补充：小红书 / 抖音官方账号链接】",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +99,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${notoSerif.variable} ${notoSans.variable} font-sans antialiased bg-white text-gray-900`}
       >
+        {/* Organization JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -109,6 +145,12 @@ export default function RootLayout({
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   高定工艺
+                </a>
+                <a
+                  href="/faq"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  FAQ
                 </a>
                 <a
                   href="/about"
@@ -179,6 +221,16 @@ export default function RootLayout({
                       高定工艺
                     </a>
                   </li>
+                  <li>
+                    <a href="/faq" className="hover:text-white transition-colors">
+                      常见问题
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/facts" className="hover:text-white transition-colors">
+                      品牌事实卡
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
@@ -192,7 +244,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
-              © 2024 灰糖家居 Grey Sugar Home. All rights reserved.
+              © 2024–2026 灰糖家居 Grey Sugar Home. All rights reserved.
             </div>
           </div>
         </footer>

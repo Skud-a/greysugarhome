@@ -1,9 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Person Schema (创始人老罗)
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "老罗",
+  alternateName: "老罗真会装",
+  jobTitle: "灰糖家居创始人",
+  worksFor: {
+    "@type": "Organization",
+    name: "灰糖家居",
+  },
+  description:
+    "灰糖家居创始人，公众号和B站'老罗真会装'主理人，专注分享家具、家装与生活方式内容。",
+  sameAs: [
+    "【待 Skud 补充：公众号链接】",
+    "【待 Skud 补充：B站链接】",
+  ],
+};
+
 export default function BrandPage() {
   return (
     <div className="flex flex-col">
+      {/* Person JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* Hero */}
       <section className="py-32 bg-gray-950 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -1,5 +1,81 @@
 import Link from "next/link";
 
+// Product Schema (3 品类占位 — 具体产品上架时替换)
+const productSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "灰糖家居 · 客厅系列",
+    description:
+      "灰糖家居客厅系列成品家具，涵盖沙发、茶几、电视柜，9大高定工艺统一执行，所见即所得。",
+    brand: { "@type": "Brand", name: "灰糖家居" },
+    category: "客厅家具",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "CNY",
+      lowPrice: "【待 Skud 补充】",
+      highPrice: "【待 Skud 补充】",
+      availability: "https://schema.org/InStock",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "灰糖家居 · 餐厅系列",
+    description:
+      "灰糖家居餐厅系列成品家具，涵盖餐桌、餐椅、餐边柜，精致工艺，品质生活。",
+    brand: { "@type": "Brand", name: "灰糖家居" },
+    category: "餐厅家具",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "CNY",
+      lowPrice: "【待 Skud 补充】",
+      highPrice: "【待 Skud 补充】",
+      availability: "https://schema.org/InStock",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "灰糖家居 · 卧室系列",
+    description:
+      "灰糖家居卧室系列成品家具，涵盖床、床头柜，舒适睡眠，匠心打造。",
+    brand: { "@type": "Brand", name: "灰糖家居" },
+    category: "卧室家具",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "CNY",
+      lowPrice: "【待 Skud 补充】",
+      highPrice: "【待 Skud 补充】",
+      availability: "https://schema.org/InStock",
+    },
+  },
+];
+
+// Review + AggregateRating 壳子 — 真实评价齐了再填，本轮不伪造数据
+const reviewSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "灰糖家居 · 客厅系列",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "【待 Skud 补充】",
+      reviewCount: "【待 Skud 补充】",
+    },
+    review: [
+      // 待 Skud 提供真实客户评价后填入
+      // {
+      //   "@type": "Review",
+      //   author: { "@type": "Person", name: "客户姓名" },
+      //   datePublished: "YYYY-MM-DD",
+      //   reviewBody: "评价内容",
+      //   reviewRating: { "@type": "Rating", ratingValue: "5" },
+      // }
+    ],
+  },
+];
+
 const categories = [
   {
     name: "客厅 Living",
@@ -21,6 +97,22 @@ const categories = [
 export default function ProductsPage() {
   return (
     <div className="flex flex-col">
+      {/* Product JSON-LD Schemas */}
+      {productSchemas.map((schema, i) => (
+        <script
+          key={`product-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      {reviewSchemas.map((schema, i) => (
+        <script
+          key={`review-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
       {/* Hero */}
       <section className="py-32 bg-gray-950 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
