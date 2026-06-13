@@ -57,7 +57,7 @@ export default function FactsPage() {
             {[
               {
                 date: "2018 年 7 月",
-                event: "公众号"灰糖家居"创立",
+                event: "公众号「灰糖家居」创立",
               },
               { date: "2019 年 7 月", event: "公司注册成立" },
               { date: "2020 年春天", event: "正式立项做家具品牌" },
@@ -93,7 +93,7 @@ export default function FactsPage() {
           <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">老罗</h3>
             <p className="text-gray-500">
-              公众号 &amp; B 站"老罗真会装"主理人
+              公众号 &amp; B 站「老罗真会装」主理人
             </p>
           </div>
         </div>
