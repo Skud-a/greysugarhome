@@ -173,6 +173,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Material Safety Teaser */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">Material Safety</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+              材料安全 · 透明可查
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              9 大核心材料已完成国家级实验室检测，数据全部来自检测报告原文
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Link href="/safety" className="block bg-white rounded-2xl p-6 border border-gray-100 text-center hover:border-gray-300 transition-colors">
+              <div className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-1">0.008</div>
+              <div className="text-xs text-gray-500 mb-2">mg/m³</div>
+              <div className="text-xs font-medium text-gray-700">板材甲醛 · ENF级</div>
+            </Link>
+            <Link href="/safety" className="block bg-white rounded-2xl p-6 border border-gray-100 text-center hover:border-gray-300 transition-colors">
+              <div className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-1">19项</div>
+              <div className="text-xs text-gray-500 mb-2">全ND</div>
+              <div className="text-xs font-medium text-gray-700">海绵重金属 · SGS</div>
+            </Link>
+            <Link href="/safety" className="block bg-white rounded-2xl p-6 border border-gray-100 text-center hover:border-gray-300 transition-colors">
+              <div className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-1">双十环</div>
+              <div className="text-xs text-gray-500 mb-2">认证</div>
+              <div className="text-xs font-medium text-gray-700">胶水+布艺</div>
+            </Link>
+            <Link href="/safety" className="block bg-white rounded-2xl p-6 border border-gray-100 text-center hover:border-gray-300 transition-colors">
+              <div className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-1">未检出</div>
+              <div className="text-xs text-gray-500 mb-2">甲醛</div>
+              <div className="text-xs font-medium text-gray-700">仿皮材料 · A类</div>
+            </Link>
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/safety" className="inline-flex items-center text-sm text-gray-900 border-b border-gray-300 pb-1 hover:border-gray-900 transition-colors">
+              查看完整材料安全报告 →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Supply Chain Teaser */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">

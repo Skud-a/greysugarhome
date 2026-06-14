@@ -56,6 +56,35 @@ const localBusinessSchema = {
         "3 年非人为工艺缺陷免费质保 + 10 年质保支持期内成本价维修与配件更换",
     },
   },
+  additionalProperty: [
+    {
+      "@type": "PropertyValue",
+      name: "板材环保等级",
+      value: "ENF级（GB/T 39600-2021）",
+      propertyID: "GB/T 39600-2021",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "板材甲醛释放量",
+      value: "0.008 mg/m³（黄埔海关技术中心检测，报告号24202600083C）",
+      measurementTechnique: "GB/T 39600-2021 1m³气候箱法",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "胶粘剂认证",
+      value: "中国环境标志（十环）CEC2020ELP00811231（生态环境部）",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "纺织品认证",
+      value: "中国环境标志（十环）CEC2019ELP00908696（生态环境部）",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "海绵重金属检测",
+      value: "EN 71-3:2019+A1:2021 19项全未检出（SGS通标，报告号SDHL2206011173FT）",
+    },
+  ],
 };
 
 export default function ShowroomPage() {
