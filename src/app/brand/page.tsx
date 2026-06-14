@@ -92,15 +92,12 @@ export default function BrandPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">02 / 理念</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-            抱歉，不打折
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
+            价格的诚实
           </h2>
-          <p className="text-xl md:text-2xl font-serif text-gray-700 mb-12">
-            明码实价，不议价，不接受还价。
-          </p>
           <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
             <p>
-              <strong className="text-gray-900">定价原则：</strong>不打折、不做活动、不接受还价。
+              <strong className="text-gray-900">定价原则：</strong>不打折、不做活动、长期统一定价。
             </p>
             <p>
               <strong className="text-gray-900">为什么？</strong>折扣是价格的敌人，是对已购用户的不公平，是品牌溢价最丑陋的部分。

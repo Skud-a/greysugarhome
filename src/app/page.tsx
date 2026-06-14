@@ -15,9 +15,9 @@ export default function HomePage() {
             好家具，不溢价
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            抱歉，不打折。
+            成都太古里 2000 平旗舰展厅
             <br className="hidden md:block" />
-            明码实价，不议价，不接受还价。
+            灰糖旗下高定家具品牌·100% 自营·去除中间商溢价
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.45s" }}>
             <Link href="/brand" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">

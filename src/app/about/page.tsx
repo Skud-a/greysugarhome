@@ -114,10 +114,6 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-serif font-bold mb-4">
             好家具，不溢价
-            <br />
-            抱歉，不打折
-            <br />
-            明码实价，不议价，不接受还价
           </h2>
           <p className="text-gray-500 mb-8">
             祝愿大家，也祝愿我们：心中的热爱永远滚烫，所有的坚持都听到回响。

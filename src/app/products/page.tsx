@@ -175,7 +175,7 @@ export default function ProductsPage() {
               },
               {
                 title: "不打折不溢价",
-                desc: "明码实价，去除品牌溢价，让好家具回归合理价格",
+                desc: "去除品牌溢价，让好家具回归合理价格",
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100">
