@@ -38,7 +38,7 @@ export default function FactsPage() {
               成都本土的中高端成品家具与软装设计品牌
             </p>
             <p className="text-xl text-gray-300 mt-2 font-medium">
-              "好家具，不溢价"
+              「好家具，不溢价 ｜ 抱歉，不打折 ｜ 明码实价，不议价，不接受还价」
             </p>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function FactsPage() {
           </h2>
           <div className="space-y-3">
             {[
-              "抱歉，不打折 —— 统一低价，对所有顾客公平",
+              "抱歉，不打折 —— 明码实价，不议价，不接受还价",
               "100% 自营展厅、自营物流安装、自营售后",
               "三地工厂直供，去掉中间环节",
               "9 大高定工艺统一执行",
