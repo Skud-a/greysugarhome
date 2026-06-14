@@ -22,5 +22,6 @@
     "eslint-config-next": "16.2.7",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "vercel_test": "v2.2_integration_check"
 }
