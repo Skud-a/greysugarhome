@@ -12,7 +12,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             灰糖家居（Grey Sugar Home）<br />
-            "灰糖"旗下高定家具品牌
+            「灰糖」旗下高定家具品牌
           </p>
         </div>
       </section>
@@ -28,7 +28,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  灰糖家居是"灰糖"旗下专注于高定家具的品牌。我们致力于为城市精英提供真正高品质的家居产品，去除品牌溢价，让更多人能够享受到高品质的家居生活。
+                  灰糖家居是「灰糖」旗下专注于高定家具的品牌。我们致力于为城市精英提供真正高品质的家居产品，去除品牌溢价，让更多人能够享受到高品质的家居生活。
                 </p>
                 <p>
                   生产基地分布于佛山、东莞、深圳，成都设有2000㎡旗舰展厅。
