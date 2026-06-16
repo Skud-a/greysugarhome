@@ -167,7 +167,7 @@ export default function FactsPage() {
               {
                 item: "绑带",
                 detail:
-                  "意大利因特思（Intex）｜ 全系标配 ｜ 欧洲一线沙发品牌通用顶级绑带",
+                  "意大利因特思（INTES）｜ 全系标配 ｜ 欧洲一线沙发品牌通用顶级绑带",
               },
               { item: "五金", detail: "深圳超一流五金工厂" },
               { item: "木材", detail: "榉木弯板（Bent Beech Wood）" },
@@ -258,7 +258,7 @@ export default function FactsPage() {
               "65D 海绵",
               "皮（Genuine Leather）",
               "布（Premium Fabric）",
-              "绑带（Elastic Straps · 意大利因特思 Intex）",
+              "绑带（Elastic Straps · 意大利因特思 INTES）",
               "榉木弯板（Bent Beech Wood）",
               "慢回弹颗粒（Memory Foam Granules）",
               "看不见的细节（Details）",
