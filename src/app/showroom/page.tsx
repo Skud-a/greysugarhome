@@ -195,7 +195,7 @@ export default function ShowroomPage() {
                 <span className="text-gray-500">100个车位</span>
               </p>
               <p className="text-xs text-gray-400 mt-2">
-                地铁新南门站D口步行可达
+                地铁 1 号线新南门站 D 口出·步行可达
               </p>
             </div>
           </div>
@@ -349,9 +349,9 @@ export default function ShowroomPage() {
               <div className="text-3xl mb-4">🚇</div>
               <h3 className="font-semibold mb-2">交通</h3>
               <p className="text-gray-400 text-sm">
-                地铁新南门站
+                地铁 1 号线
                 <br />
-                D口步行可达
+                新南门站 D 口出
               </p>
             </div>
             <div className="p-8 border border-gray-800 rounded-2xl">

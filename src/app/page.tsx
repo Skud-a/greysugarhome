@@ -121,7 +121,7 @@ export default function HomePage() {
               </p>
               <div className="space-y-3 text-sm text-gray-500 mb-8">
                 <p> 新南路40号院</p>
-                <p>🚇 地铁新南门站D口步行可达</p>
+                <p>🚇 地铁 1 号线新南门站 D 口出·步行可达</p>
                 <p>🅿️ 专属停车场 · 100个车位</p>
               </div>
               <Link href="/showroom" className="inline-flex items-center text-sm text-white border-b border-gray-600 pb-1 hover:border-white transition-colors">

@@ -99,7 +99,7 @@ export default function AboutPage() {
             <p className="text-gray-500 text-sm mb-6">导航搜索"灰糖家居"</p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
               <span className="px-4 py-2 bg-white rounded-full border border-gray-200">
-                🚇 地铁新南门站D口
+                🚇 地铁 1 号线新南门站 D 口出，即新南路 40 号院
               </span>
               <span className="px-4 py-2 bg-white rounded-full border border-gray-200">
                 🅿️ 专属停车场 · 100个车位
