@@ -28,7 +28,7 @@ export default function SupplyChainPage() {
               src="/images/attitude.jpg"
               alt="灰糖家居供应链溯源"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="100vw"
             />
           </div>

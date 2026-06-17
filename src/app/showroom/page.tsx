@@ -105,7 +105,7 @@ export default function ShowroomPage() {
             src="/images/showroom.jpg"
             alt=""
             fill
-            className="object-cover"
+            className="object-cover object-top"
             sizes="100vw"
           />
         </div>
