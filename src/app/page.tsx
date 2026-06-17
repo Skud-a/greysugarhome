@@ -244,7 +244,7 @@ export default function HomePage() {
                 src="/images/attitude.jpg"
                 alt="灰糖家居供应链溯源"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>

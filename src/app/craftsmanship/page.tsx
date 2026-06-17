@@ -84,7 +84,7 @@ export default function CraftsmanshipPage() {
               src="/images/craftsmanship.jpg"
               alt="灰糖家居高定工艺标准"
               fill
-              className="object-cover object-top"
+              className="object-cover"
               sizes="100vw"
             />
           </div>
