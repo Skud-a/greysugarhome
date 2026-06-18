@@ -1,9 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// ImageObject Schema - 供应链/态度图
+const attitudeImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://greysugarhome.com/images/attitude.jpg",
+  "caption": "灰糖家居供应链溯源 - 皮革压合工艺",
+  "description": "皮革压合车间实景，工人手工处理真皮材料，展现高定家具制作工艺",
+  "creator": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "license": "https://greysugarhome.com/copyright",
+  "acquireLicensePage": "https://greysugarhome.com/contact",
+  "representativeOfPage": true
+};
+
 export default function SupplyChainPage() {
   return (
     <div className="flex flex-col">
+      {/* ImageObject JSON-LD Schema - 供应链图 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(attitudeImageSchema),
+        }}
+      />
+
       {/* Hero */}
       <section className="py-32 bg-gray-950 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

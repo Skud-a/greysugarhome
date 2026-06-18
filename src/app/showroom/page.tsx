@@ -1,6 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// ImageObject Schema - 展厅Hero图
+const showroomImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://greysugarhome.com/images/showroom.jpg",
+  "caption": "灰糖家居成都太古里旗舰展厅中庭",
+  "description": "2000㎡旗舰展厅中庭，玻璃盒设计结构，自然光影美学空间",
+  "creator": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "license": "https://greysugarhome.com/copyright",
+  "acquireLicensePage": "https://greysugarhome.com/contact",
+  "representativeOfPage": true
+};
+
 // LocalBusiness Schema (展厅页)
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -90,6 +110,14 @@ const localBusinessSchema = {
 export default function ShowroomPage() {
   return (
     <div className="flex flex-col">
+      {/* ImageObject JSON-LD Schema - 展厅图 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(showroomImageSchema),
+        }}
+      />
+
       {/* LocalBusiness JSON-LD Schema */}
       <script
         type="application/ld+json"

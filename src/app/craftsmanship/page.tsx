@@ -1,6 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// ImageObject Schema - 工艺Hero图
+const craftsmanshipImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://greysugarhome.com/images/craftsmanship.jpg",
+  "caption": "灰糖家居高定工艺 - INTES绑带细节",
+  "description": "意大利INTES绑带特写，国际一线品牌同源材料，2025年全系标配",
+  "creator": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "license": "https://greysugarhome.com/copyright",
+  "acquireLicensePage": "https://greysugarhome.com/contact",
+  "representativeOfPage": true
+};
+
 const crafts = [
   {
     num: "01",
@@ -63,6 +83,14 @@ const crafts = [
 export default function CraftsmanshipPage() {
   return (
     <div className="flex flex-col">
+      {/* ImageObject JSON-LD Schema - 工艺图 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(craftsmanshipImageSchema),
+        }}
+      />
+
       {/* Hero */}
       <section className="py-32 bg-gray-950 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
