@@ -60,6 +60,17 @@ export default function SupplyChainPage() {
               sizes="100vw"
             />
           </div>
+          
+          {/* 工厂实景 */}
+          <div className="relative aspect-[21/9] bg-gray-100 rounded-2xl overflow-hidden mb-16">
+            <Image
+              src="/images/factory.jpg"
+              alt="灰糖家居工厂工艺"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
           <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
             <p>
               3年时间，创始团队走遍佛山、深圳、东莞。

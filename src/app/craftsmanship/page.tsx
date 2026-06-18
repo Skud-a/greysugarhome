@@ -119,6 +119,21 @@ export default function CraftsmanshipPage() {
         </div>
       </section>
 
+      {/* Materials Showcase */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="relative aspect-[21/9] bg-gray-100 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/materials.jpg"
+              alt="灰糖家居高定材料"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 9 Crafts */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">

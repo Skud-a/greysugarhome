@@ -49,22 +49,33 @@ export default function BrandPage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
               灰糖的诞生
             </h2>
-            <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
-              <p>
-                2018年夏天，灰糖公众号成立。
-              </p>
-              <p>
-                2019年7月，灰糖公司正式成立。
-              </p>
-              <p>
-                2020年春天，灰糖家居正式立项。
-              </p>
-              <p>
-                2022年秋天，灰糖家居正式成立，与大家见面。
-              </p>
-              <p>
-                2024年5月，新展厅完成。
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+              <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+                <p>
+                  2018年夏天，灰糖公众号成立。
+                </p>
+                <p>
+                  2019年7月，灰糖公司正式成立。
+                </p>
+                <p>
+                  2020年春天，灰糖家居正式立项。
+                </p>
+                <p>
+                  2022年秋天，灰糖家居正式成立，与大家见面。
+                </p>
+                <p>
+                  2024年5月，新展厅完成。
+                </p>
+              </div>
+              <div className="relative aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/brand-story.jpg"
+                  alt="灰糖家居品牌空间"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
 

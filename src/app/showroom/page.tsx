@@ -242,6 +242,18 @@ export default function ShowroomPage() {
             </h2>
             <p className="text-gray-500">展厅已拍摄实景风格展示</p>
           </div>
+          
+          {/* 展厅实景大图 */}
+          <div className="relative aspect-[21/9] bg-gray-100 rounded-2xl overflow-hidden mb-16">
+            <Image
+              src="/images/showroom-detail.jpg"
+              alt="灰糖家居展厅实景"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
