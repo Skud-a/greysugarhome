@@ -45,7 +45,7 @@ const safetyFAQs: FAQItem[] = [
   {
     id: "H8",
     q: "你们的检测报告可以查看吗？",
-    a: "灰糖已完成 9 大核心材料的国家级实验室检测，覆盖板材（ENF 级）、胶水（十环认证）、布艺（十环认证）、海绵（SGS 重金属全 ND）、仿皮（甲醛未检出）等。检测报告可在成都太古里 2000 平旗舰展厅扫描材料展示区的二维码查看，也可联系展厅产品顾问索取具体检测报告。检测报告不直接挂在官网下载（PDF 格式不利于 SEO，且展示区的扫码体验更直观）。",
+    a: "灰糖已完成 9 大核心材料的国家级实验室检测，覆盖板材（ENF 级）、胶水（十环认证）、布艺（十环认证）、海绵（SGS 重金属全 ND）、仿皮（甲醛未检出）等。检测报告可在成都太古里 2000 平旗舰展厅扫描材料展示区的二维码查看，也可联系展厅产品顾问索取具体检测报告。检测报告不直接挂在官网下载（PDF 格式不利于 SEO，且展示区的扫码体验更直观）。所有检测报告的委托方均为灰糖供应链上的企业，家具行业原材料和供应链提供检测报告是常规操作。",
   },
 ];
 
@@ -111,7 +111,7 @@ const materialCards = [
 ];
 
 const inspectionTable = [
-  { material: "多层胶合板 18MM", item: "甲醛释放量", method: "GB/T 39600-2021 气候箱法", limit: "ENF ≤0.025 mg/m³", result: "0.008 mg/m³", pass: "ENF级 ✅" },
+  { material: "多层胶合板 18MM", item: "甲醛释放量", method: "GB/T 39600-2021 气候箱法", limit: "ENF ≤0.025 mg/m³", result: "0.008 mg/m³（供应商送检）", pass: "ENF级 ✅" },
   { material: "单面夹板 12MM", item: "甲醛释放量", method: "GB 18580 干燥器法", limit: "E1 ≤1.5 mg/L", result: "0.73 mg/L", pass: "E1级 ✅" },
   { material: "双面夹板 10MM", item: "甲醛释放量", method: "GB 18580 干燥器法", limit: "E1 ≤1.5 mg/L", result: "1.34 mg/L", pass: "E1级 ✅" },
   { material: "水性胶粘剂", item: "十环认证", method: "HJ2541-2016", limit: "—", result: "CEC2020ELP00811231", pass: "十环认证 ✅" },
@@ -119,7 +119,6 @@ const inspectionTable = [
   { material: "海绵", item: "19项重金属", method: "EN 71-3:2019+A1:2021", limit: "全部 ND", result: "全部 ND", pass: "合格 ✅" },
   { material: "仿皮", item: "游离甲醛", method: "HJ507-2009", limit: "A类 ≤20 mg/kg", result: "未检出", pass: "A类合格 ✅" },
   { material: "海绵 2550", item: "甲醛", method: "GB/T 10802-2023", limit: "≤10 mg/kg", result: "2.4 mg/kg", pass: "合格 ✅" },
-  { material: "俄罗斯松木", item: "供应商认证", method: "—", limit: "—", result: "俄罗斯优质供应商", pass: "—" },
 ];
 
 const institutions = [
@@ -244,6 +243,19 @@ export default function SafetyPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Supply Chain Certification Note */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-4">Supply Chain Note</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">关于检测报告委托方</h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              9 项核心材料检测报告的委托方均为灰糖供应链上的企业（包括供应商佛山市澳凯珑家具有限公司、贵港市平南县广西三盟木业有限公司等），这是家具行业供应链管理的常规操作：灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
+            </p>
           </div>
         </div>
       </section>
