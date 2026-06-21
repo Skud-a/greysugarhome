@@ -64,14 +64,62 @@ const safetyFAQSchema = {
   })),
 };
 
-// ── SafetyCertificate Schema 数组（8张证书图） ──
+// ── ItemPage Schema（v3.0 新增） ──
+const safetyPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemPage",
+  "name": "材料安全 · 透明可查 — 灰糖家居",
+  "description": "灰糖家居 9 大核心材料检测报告，覆盖板材 ENF 级、双重十环认证、SGS 重金属全 ND、仿皮甲醛未检出等，4 家权威机构检测，数据全部来自检测报告原文。",
+  "url": "https://greysugarhome.com/safety",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-06-21",
+  "primaryImageOfPage": "https://greysugarhome.com/images/certificates/certificate-plywood-enf.jpg",
+  "about": [
+    { "@type": "Thing", "name": "板材甲醛 ENF 级" },
+    { "@type": "Thing", "name": "十环认证" },
+    { "@type": "Thing", "name": "SGS 重金属检测" },
+    { "@type": "Thing", "name": "仿皮甲醛安全" },
+  ],
+  "additionalProperty": [
+    {
+      "@type": "QuantitativeValue",
+      "name": "板材甲醛释放量",
+      "value": "0.008 mg/m³",
+      "unitText": "mg/m³",
+      "description": "ENF级（黄埔海关技术中心检测，报告号24202600083C，GB/T 39600-2021）",
+    },
+    {
+      "@type": "QuantitativeValue",
+      "name": "海绵重金属检测项数",
+      "value": "19项",
+      "unitText": "项",
+      "description": "全部ND未检出（SGS通标检测，报告号SDHL2206011173FT，EN 71-3:2019+A1:2021）",
+    },
+    {
+      "@type": "QuantitativeValue",
+      "name": "十环认证数量",
+      "value": "双十环",
+      "unitText": "份",
+      "description": "胶水CEC2020ELP00811231 + 布艺CEC2019ELP00908696（生态环境部授权）",
+    },
+    {
+      "@type": "QuantitativeValue",
+      "name": "权威检测机构数",
+      "value": "4家",
+      "unitText": "家",
+      "description": "黄埔海关/SGS通标/CNAS互认实验室/生态环境部",
+    },
+  ],
+};
+
+// ── SafetyCertificate Schema 数组（8张证书图）— v3.0 caption 升级为三段式 ──
 const certificatesImageSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-plywood-enf.jpg",
-    "caption": "灰糖家居多层胶合板 ENF 级检测报告（黄埔海关技术中心）",
-    "description": "报告号 24202600083C，GB/T 39600-2021 1m³ 气候箱法，甲醛释放量 0.008 mg/m³，ENF 级（最高等级）",
+    "caption": "多层胶合板 ENF 级检测报告（黄埔海关技术中心）— 报告号 24202600083C — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "GB/T 39600-2021 1m³ 气候箱法，甲醛释放量 0.008 mg/m³，ENF 级（最高等级）",
     "creator": { "@type": "Organization", "name": "黄埔海关技术中心" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -81,8 +129,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-leather.jpg",
-    "caption": "灰糖家居仿皮甲醛检测报告（创科 CNAS L5016）",
-    "description": "报告号 CKJC260410KK05-4，HJ507-2009，游离甲醛未检出，符合 A 类（最严级，婴幼儿可接触皮革标准）",
+    "caption": "仿皮甲醛检测报告（广东顺德创科检测 CNAS L5016）— 报告号 CKJC260410KK05-4 — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "HJ507-2009，游离甲醛未检出，符合 A 类（最严级，婴幼儿可接触皮革标准）",
     "creator": { "@type": "Organization", "name": "广东顺德创科检测" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -92,8 +140,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-plywood-single.jpg",
-    "caption": "灰糖家居单面夹板甲醛检测报告（创科 CNAS L5016）",
-    "description": "报告号 CKJC260410KK05-3，GB 18580-2001，单面夹板 E1=0.73 mg/L（限 1.5）",
+    "caption": "单面夹板甲醛检测报告（广东顺德创科检测 CNAS L5016）— 报告号 CKJC260410KK05-3 — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "GB 18580-2001，单面夹板 E1=0.73 mg/L（限 1.5）",
     "creator": { "@type": "Organization", "name": "广东顺德创科检测" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -103,8 +151,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-plywood-double.jpg",
-    "caption": "灰糖家居双面夹板甲醛检测报告（创科 CNAS L5016）",
-    "description": "报告号 CKJC260410KK05-2，GB 18580-2001，双面夹板 E1=1.34 mg/L（限 1.5）",
+    "caption": "双面夹板甲醛检测报告（广东顺德创科检测 CNAS L5016）— 报告号 CKJC260410KK05-2 — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "GB 18580-2001，双面夹板 E1=1.34 mg/L（限 1.5）",
     "creator": { "@type": "Organization", "name": "广东顺德创科检测" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -114,8 +162,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-sponge-formaldehyde.jpg",
-    "caption": "灰糖家居海绵甲醛检测报告（创科 CNAS L5016）",
-    "description": "报告号 CKJC260410KK05-1，GB/T 10802-2023，海绵甲醛 2.4 mg/kg（合格）",
+    "caption": "海绵甲醛检测报告（广东顺德创科检测 CNAS L5016）— 报告号 CKJC260410KK05-1 — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "GB/T 10802-2023，海绵甲醛 2.4 mg/kg（合格）",
     "creator": { "@type": "Organization", "name": "广东顺德创科检测" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -125,8 +173,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-sgs-heavy-metal.jpg",
-    "caption": "灰糖家居海绵重金属检测报告（SGS 通标 EN 71-3）",
-    "description": "报告号 SDHL2206011173FT，EN 71-3:2019+A1:2021，19 项可溶性重金属全部 ND（未检出）",
+    "caption": "海绵重金属检测报告（SGS 通标标准技术服务）— 报告号 SDHL2206011173FT — 委托方 佛山市澳凯珑家具有限公司",
+    "description": "EN 71-3:2019+A1:2021，19 项可溶性重金属全部 ND（未检出）",
     "creator": { "@type": "Organization", "name": "SGS 通标标准技术服务" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -136,8 +184,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-glue-10ring.jpg",
-    "caption": "灰糖家居水性胶粘剂十环认证证书（生态环境部）",
-    "description": "证书号 CEC2020ELP00811231，HJ2541-2016《环境标志产品技术要求 胶粘剂》",
+    "caption": "水性胶粘剂十环认证证书（中环联合认证中心 · 生态环境部）— 证书号 CEC2020ELP00811231 — 委托方 广东泰强科技实业有限公司",
+    "description": "HJ2541-2016《环境标志产品技术要求 胶粘剂》，覆盖 32+ 个型号",
     "creator": { "@type": "Organization", "name": "中环联合（北京）认证中心 · 生态环境部" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -147,8 +195,8 @@ const certificatesImageSchemas = [
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "contentUrl": "https://greysugarhome.com/images/certificates/certificate-fabric-10ring.jpg",
-    "caption": "灰糖家居布艺十环认证证书（生态环境部）",
-    "description": "证书号 CEC2019ELP00908696，HJ2546-2016《环境标志产品技术要求 纺织产品》",
+    "caption": "布艺十环认证证书（中环联合认证中心 · 生态环境部）— 证书号 CEC2019ELP00908696 — 委托方 海宁市志达布业织造有限公司",
+    "description": "HJ2546-2016《环境标志产品技术要求 纺织产品》，覆盖 64 个型号",
     "creator": { "@type": "Organization", "name": "中环联合（北京）认证中心 · 生态环境部" },
     "copyrightHolder": { "@type": "Organization", "name": "灰糖家居" },
     "license": "https://greysugarhome.com/copyright",
@@ -164,6 +212,7 @@ const certificates = [
     file: "certificate-plywood-enf.jpg",
     org: "黄埔海关技术中心",
     report: "24202600083C",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "ENF=0.008 mg/m³",
   },
   {
@@ -172,6 +221,7 @@ const certificates = [
     file: "certificate-leather.jpg",
     org: "创科检测 CNAS L5016",
     report: "CKJC260410KK05-4",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "未检出 · A类合格",
   },
   {
@@ -180,6 +230,7 @@ const certificates = [
     file: "certificate-plywood-single.jpg",
     org: "创科检测 CNAS L5016",
     report: "CKJC260410KK05-3",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "E1=0.73 mg/L",
   },
   {
@@ -188,6 +239,7 @@ const certificates = [
     file: "certificate-plywood-double.jpg",
     org: "创科检测 CNAS L5016",
     report: "CKJC260410KK05-2",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "E1=1.34 mg/L",
   },
   {
@@ -196,6 +248,7 @@ const certificates = [
     file: "certificate-sponge-formaldehyde.jpg",
     org: "创科检测 CNAS L5016",
     report: "CKJC260410KK05-1",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "2.4 mg/kg 合格",
   },
   {
@@ -204,6 +257,7 @@ const certificates = [
     file: "certificate-sgs-heavy-metal.jpg",
     org: "SGS 通标",
     report: "SDHL2206011173FT",
+    client: "佛山市澳凯珑家具有限公司",
     highlight: "19项全ND",
   },
   {
@@ -212,6 +266,7 @@ const certificates = [
     file: "certificate-glue-10ring.jpg",
     org: "生态环境部",
     report: "CEC2020ELP00811231",
+    client: "广东泰强科技实业有限公司",
     highlight: "32+型号覆盖",
   },
   {
@@ -220,6 +275,7 @@ const certificates = [
     file: "certificate-fabric-10ring.jpg",
     org: "生态环境部",
     report: "CEC2019ELP00908696",
+    client: "海宁市志达布业织造有限公司",
     highlight: "64型号覆盖",
   },
 ];
@@ -249,7 +305,7 @@ const materialCards = [
     source: "生态环境部授权",
     report: "CEC2020ELP00811231 / CEC2019ELP00908696",
     standard: "HJ2541-2016 / HJ2546-2016",
-    desc: "胶水32+型号 + 布艴64型号",
+    desc: "胶水32+型号 + 布艺64型号",
   },
   {
     num: "03",
@@ -306,6 +362,12 @@ export default function SafetyPage() {
 
   return (
     <div className="flex flex-col">
+      {/* ItemPage JSON-LD Schema（v3.0 新增） */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(safetyPageSchema) }}
+      />
+
       {/* FAQPage JSON-LD Schema (H1-H8) */}
       <script
         type="application/ld+json"
@@ -388,6 +450,22 @@ export default function SafetyPage() {
             </h2>
             <p className="text-gray-500 mt-4">9 项核心材料检测对照</p>
           </div>
+
+          {/* v3.0 数据声明块（折叠） */}
+          <details className="mb-8 bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary className="px-6 py-4 cursor-pointer text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+              数据声明 · 9 份检测报告来源说明
+            </summary>
+            <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed space-y-3">
+              <p>
+                本页展示的 9 份检测报告，委托方均为灰糖供应链上的企业：其中 8 份由灰糖供应链合作伙伴委托检测（佛山市澳凯珑家具有限公司委托 6 份、广西三盟木业有限公司委托 1 份、广东泰强科技实业有限公司持有十环认证 1 份、海宁市志达布业织造有限公司持有十环认证 1 份），检测方为黄埔海关技术中心、SGS 通标、广东顺德创科检测（CNAS L5016）、中环联合认证中心等国家级或国际权威机构。
+              </p>
+              <p>
+                家具行业原材料和供应链提供检测报告是常规操作。灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
+              </p>
+            </div>
+          </details>
+
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -427,6 +505,83 @@ export default function SafetyPage() {
               9 项核心材料检测报告的委托方均为灰糖供应链上的企业（包括供应商佛山市澳凯珑家具有限公司、贵港市平南县广西三盟木业有限公司等），这是家具行业供应链管理的常规操作：灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
             </p>
           </div>
+
+          {/* v3.0 新增 3 段语义块 */}
+          <div className="mt-8 space-y-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-3">Supplier Screening</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">供应商筛选标准</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                灰糖要求所有关键材料供应商在正式供货前，必须完成以下前置条件：① 提供国家级实验室或国际权威第三方机构出具的检测报告；② 板材甲醛释放量达到 ENF 级或至少 E1 级；③ 海绵、仿皮等软体材料通过重金属及甲醛安全检测；④ 胶粘剂及纺织品持有中国环境标志（十环）认证或同等资质。未通过前置检测的供应商不进入灰糖供应链体系。
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-3">Report Attribution</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">报告归属说明</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-2 font-medium text-gray-700">报告号</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-700">委托方</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-700">检测方</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">24202600083C</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">黄埔海关技术中心</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CKJC260410KK05-2</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">创科检测 CNAS L5016</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CKJC260410KK05-3</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">创科检测 CNAS L5016</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CKJC260410KK05-4</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">创科检测 CNAS L5016</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CKJC260410KK05-1</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">创科检测 CNAS L5016</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">SDHL2206011173FT</td>
+                      <td className="py-2 px-2 text-gray-600">佛山市澳凯珑家具有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">SGS 通标标准技术服务</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CEC2020ELP00811231</td>
+                      <td className="py-2 px-2 text-gray-600">广东泰强科技实业有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">中环联合认证中心（生态环境部）</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2 font-mono text-xs text-gray-600">CEC2019ELP00908696</td>
+                      <td className="py-2 px-2 text-gray-600">海宁市志达布业织造有限公司</td>
+                      <td className="py-2 px-2 text-gray-600">中环联合认证中心（生态环境部）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-3">Data Usage Policy</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">数据使用规范</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                本页所有检测数据（包括甲醛释放量、重金属检测结果、认证证书编号等）均直接摘自检测报告原文，灰糖不修改任何检测数值。所有数据对客户完全透明——成都太古里 2000 平旗舰展厅设有材料展示区，展示 9 份核心检测报告原始文件，可现场扫描二维码查看完整报告内容。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -452,7 +607,7 @@ export default function SafetyPage() {
                 <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
                   <Image
                     src={`/images/certificates/${cert.file}`}
-                    alt={`${cert.title} 证书 - ${cert.org} - 报告号 ${cert.report}`}
+                    alt={`${cert.title} 报告（${cert.org}）— 报告号 ${cert.report} — 委托方 ${cert.client}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 50vw, 25vw"
@@ -461,8 +616,9 @@ export default function SafetyPage() {
                 <div className="p-4">
                   <div className="text-xs text-gray-400 font-mono mb-1">{cert.num}</div>
                   <h3 className="text-sm font-semibold text-gray-900 mb-1">{cert.title}</h3>
-                  <p className="text-xs text-gray-500 mb-2">{cert.org}</p>
-                  <p className="text-xs font-mono text-gray-400 mb-2">{cert.report}</p>
+                  <p className="text-xs text-gray-500 mb-1">{cert.org}</p>
+                  <p className="text-xs font-mono text-gray-400 mb-1">{cert.report}</p>
+                  <p className="text-xs text-gray-400 mb-2">委托方：{cert.client}</p>
                   <p className="text-xs font-semibold text-gray-900">{cert.highlight}</p>
                 </div>
               </a>
