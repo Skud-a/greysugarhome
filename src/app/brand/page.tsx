@@ -20,6 +20,26 @@ const personSchema = {
   ],
 };
 
+// ImageObject Schema - 品牌故事图（v2.3.12 新增）
+const brandImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://greysugarhome.com/images/brand-story.jpg",
+  "caption": "灰糖家居品牌空间 - 成都太古里旗舰展厅",
+  "description": "灰糖家居品牌故事配图，展示品牌空间设计理念，2024年新展厅完成",
+  "creator": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "license": "https://greysugarhome.com/copyright",
+  "acquireLicensePage": "https://greysugarhome.com/contact",
+  "representativeOfPage": true
+};
+
 export default function BrandPage() {
   return (
     <div className="flex flex-col">
@@ -27,6 +47,12 @@ export default function BrandPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+
+      {/* ImageObject JSON-LD Schema - 品牌故事图（v2.3.12 新增） */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandImageSchema) }}
       />
       {/* Hero */}
       <section className="py-32 bg-gray-950 text-white">
@@ -212,3 +238,4 @@ export default function BrandPage() {
     </div>
   );
 }
+
