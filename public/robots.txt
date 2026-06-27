@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# AI 引擎专供抓取入口（GEO）
+Allow: /llm.txt
+Allow: /geo-card.json
+Allow: /search
+
+# Sitemap
+Sitemap: https://greysugarhome.com/sitemap.xml

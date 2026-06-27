@@ -89,6 +89,22 @@ const orgSchema = {
   ],
 };
 
+// WebSite + SearchAction Schema (站内搜索入口，给 Google Sitelinks SearchBox + AI 引擎)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "灰糖家居",
+  url: "https://greysugarhome.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://greysugarhome.com/search?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
