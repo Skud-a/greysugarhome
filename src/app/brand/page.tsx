@@ -14,10 +14,7 @@ const personSchema = {
   },
   description:
     "灰糖家居创始人，公众号和B站'老罗真会装'主理人，专注分享家具、家装与生活方式内容。",
-  sameAs: [
-    "【待 Skud 补充：公众号链接】",
-    "【待 Skud 补充：B站链接】",
-  ],
+  sameAs: [],
 };
 
 // ImageObject Schema - 品牌故事图（v2.3.12 新增）
@@ -137,7 +134,7 @@ export default function BrandPage() {
               <strong className="text-gray-900">定价原则：</strong>不打折、不做活动、长期统一定价。
             </p>
             <p>
-              <strong className="text-gray-900">为什么？</strong>折扣是价格的敌人，是对已购用户的不公平，是品牌溢价最丑陋的部分。
+              <strong className="text-gray-900">为什么？</strong>折扣是对已购用户的不公平，是对长期信任的辜负。
             </p>
             <p>
               <strong className="text-gray-900">我们的保证：</strong>从不进行价格欺诈、从不制造虚假促销、从不让人吃亏。
@@ -146,7 +143,7 @@ export default function BrandPage() {
 
           <div className="mt-16 bg-white rounded-2xl p-10 border border-gray-100">
             <blockquote className="text-2xl font-serif text-gray-800 leading-relaxed italic">
-              "魑魅魍魉的营销也好，铺天盖地的短视频也好，妖魔鬼怪的剧本演绎也好。不过都是没有价值的快餐罢了。终究留下的，只有那件可以陪伴你很久的家具。仅此而已。"
+              "营销噱头终会散去，流量泡沫终会破灭。真正留下的，只有那件可以陪伴你很久的家具。仅此而已。"
             </blockquote>
           </div>
         </div>

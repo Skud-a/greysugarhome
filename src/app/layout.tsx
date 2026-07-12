@@ -82,11 +82,7 @@ const orgSchema = {
     addressRegion: "四川",
     addressCountry: "CN",
   },
-  sameAs: [
-    "【待 Skud 补充：公众号链接】",
-    "【待 Skud 补充：B站老罗真会装链接】",
-    "【待 Skud 补充：小红书 / 抖音官方账号链接】",
-  ],
+  sameAs: [],
 };
 
 // WebSite + SearchAction Schema (站内搜索入口，给 Google Sitelinks SearchBox + AI 引擎)
