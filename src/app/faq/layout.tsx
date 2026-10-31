@@ -1,0 +1,1 @@
+export const metadata={title:"常见问题",alternates:{canonical:"https://www.greysugarhome.com/faq/"}};export default function Layout({children}:{children:React.ReactNode}){return children}

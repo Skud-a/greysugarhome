@@ -1,0 +1,86 @@
+[
+  {
+    "file": "src/app/layout.tsx",
+    "baseline_chars": 8560,
+    "restored_chars": 8656,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/page.tsx",
+    "baseline_chars": 12806,
+    "restored_chars": 12804,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/globals.css",
+    "baseline_chars": 2362,
+    "restored_chars": 2362,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/about/page.tsx",
+    "baseline_chars": 5593,
+    "restored_chars": 5592,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/brand/page.tsx",
+    "baseline_chars": 9217,
+    "restored_chars": 9229,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/craftsmanship/page.tsx",
+    "baseline_chars": 9069,
+    "restored_chars": 9081,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/facts/page.tsx",
+    "baseline_chars": 12225,
+    "restored_chars": 12230,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/faq/page.tsx",
+    "baseline_chars": 27046,
+    "restored_chars": 27324,
+    "baseline_questions": 67,
+    "restored_questions": 67
+  },
+  {
+    "file": "src/app/products/page.tsx",
+    "baseline_chars": 6703,
+    "restored_chars": 4880,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/safety/page.tsx",
+    "baseline_chars": 31838,
+    "restored_chars": 32133,
+    "baseline_questions": 9,
+    "restored_questions": 9
+  },
+  {
+    "file": "src/app/showroom/page.tsx",
+    "baseline_chars": 14529,
+    "restored_chars": 14439,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  },
+  {
+    "file": "src/app/supply-chain/page.tsx",
+    "baseline_chars": 15623,
+    "restored_chars": 15731,
+    "baseline_questions": 0,
+    "restored_questions": 0
+  }
+]

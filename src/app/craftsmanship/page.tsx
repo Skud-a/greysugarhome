@@ -1,1 +1,253 @@
-import {meta} from "@/lib/content";import {Hero,Related,Updated} from "@/components/editorial";export const metadata=meta("工艺与材料","工艺不是堆砌术语，而是说明它如何影响使用。","/craftsmanship/");export default function Page(){return <><Hero eyebrow="GREY SUGAR HOME" title="看见细节，也理解结构" description="工艺不是堆砌术语，而是说明它如何影响使用。"/><article className="wrap article"><section><h2>内外套与可维护性</h2><p>了解外层面料、内部填充与结构之间的关系，核对具体款式能否拆卸、如何清洁和维护。不能将可拆卸理解为可直接水洗。</p></section><section><h2>缝制与细节</h2><p>关注接缝、包覆、边角与连接处。不同面料和款式采用不同工艺，单一精度数字不能代替整件家具的检查。</p></section><section><h2>填充与支撑</h2><p>海绵、羽绒、慢回弹材料、绑带与框架共同影响坐感。配置按具体型号说明，不承诺所有产品采用同一种密度、绑带或填充结构。</p></section><section><h2>皮料与布艺</h2><p>结合粒面、涂饰、厚度、成分、触感及护理要求理解面料。品牌皮料分级与产品系列分别核对。</p></section><section><h2>木材与连接</h2><p>实木、木皮、板材各有不同使用位置。说明具体部件与连接结构，不把局部材质扩写成整件家具用料。</p></section><section><h2>把证据放回适用范围</h2><p>材料报告对应具体样品、项目与条件；检测数据不等于全系成品家具认证。进一步阅读材料检测资料及选购指南。</p></section><Updated/></article><Related/></>}
+export const metadata = { alternates: { canonical: "https://www.greysugarhome.com/craftsmanship/" } };
+import Link from "next/link";
+import Image from "next/image";
+
+// ImageObject Schema - 工艺Hero图
+const craftsmanshipImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "https://www.greysugarhome.com/images/craftsmanship.jpg",
+  "caption": "灰糖家居高定工艺 - INTES绑带细节",
+  "description": "意大利INTES绑带特写，国际一线品牌同源材料，2025年具体型号配置为准",
+  "creator": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "灰糖家居"
+  },
+  "license": "https://www.greysugarhome.com/copyright",
+  "acquireLicensePage": "https://www.greysugarhome.com/contact",
+  "representativeOfPage": true
+};
+
+const crafts = [
+  {
+    num: "01",
+    title: "内外套",
+    en: "Inner & Outer Shell",
+    desc: "坚持在高定产品上使用内外套工艺，黑白双色，力求极致复刻的精度标准，一丝一毫都做好极致的认真。",
+  },
+  {
+    num: "02",
+    title: "一毫米",
+    en: "One Millimeter",
+    desc: "劳伦斯沙发的绗缝工艺，5毫米和4毫米的差异，为达到指定标准更换 5 家绗缝工厂，最终的呈现是分毫不差的精准。",
+    highlight: "耗时半年研发",
+  },
+  {
+    num: "03",
+    title: "65D的极致海绵",
+    en: "Sponge",
+    desc: "在海绵工厂定制了65D的超高密度海绵，这种不计成本的投入，别人看来是傻，但有的人做事情，不管傻不傻，只是很较真。",
+  },
+  {
+    num: "04",
+    title: "皮",
+    en: "Genuine Leather",
+    desc: "为了真皮的产品，研究了3年时间，从养牛到生产再到真皮的成品，从一头牛的诞生，到最终成品边缘的削边，这种几乎偏执的追求，不为什么，就为了证明：好产品，我们可以。",
+    highlight: "耗时3年研究",
+  },
+  {
+    num: "05",
+    title: "布",
+    en: "Premium Fabric",
+    desc: "作为丝绸之路的起点，从来不相信进口的布艺能超越我们自己的产品。在宁波的许村，找到了国内能媲美进口布艺的产品。",
+  },
+  {
+    num: "06",
+    title: "绑带",
+    en: "Elastic Straps",
+    desc: "以小见大，意大利因特思（INTES）绑带，2025 年灰糖具体型号配置为准。国际一线品牌同源的材料，这是别人的天花板，却是灰糖的底线。",
+  },
+  {
+    num: "07",
+    title: "榉木弯板",
+    en: "Bent Beech Wood",
+    desc: "作为灰糖伊姆斯躺椅核心部件的定制生产，自主生产弯板，大量投入。",
+  },
+  {
+    num: "08",
+    title: "慢回弹颗粒",
+    en: "Memory Foam Granules",
+    desc: "定制小众海绵颗粒以还原原版坐感，细节把控，不计成本。",
+  },
+  {
+    num: "09",
+    title: "看不见的细节",
+    en: "Details",
+    desc: "在沙发底部细节工艺上对标 Minotti、Poliform 等进口高端品牌。五金与连接件，一丝不苟。",
+  },
+];
+
+export default function CraftsmanshipPage() {
+  return (
+    <div className="flex flex-col">
+      {/* ImageObject JSON-LD Schema - 工艺图 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(craftsmanshipImageSchema),
+        }}
+      />
+
+      {/* Hero */}
+      <section className="py-32 bg-gray-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-xs tracking-[0.3em] text-gray-500 uppercase mb-8">Craftsmanship</p>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8">
+            高定工艺标准
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            关于高定的工艺，灰糖有一套自己的标准。
+          </p>
+        </div>
+      </section>
+
+      {/* Intro Image */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="relative aspect-[21/9] bg-gray-100 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/craftsmanship.jpg"
+              alt="灰糖家居高定工艺标准"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Materials Showcase */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="relative aspect-[21/9] bg-gray-100 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/materials.jpg"
+              alt="灰糖家居高定材料"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 9 Crafts */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">9 Standards</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
+              九大工艺模块
+            </h2>
+          </div>
+          <div className="space-y-6">
+            {crafts.map((craft, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 hover:border-gray-200 transition-colors"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="text-4xl font-serif font-bold text-gray-200 flex-shrink-0 w-16">
+                    {craft.num}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-3">
+                      <h3 className="text-xl font-semibold text-gray-900">{craft.title}</h3>
+                      <span className="text-xs text-gray-400 uppercase tracking-wider">{craft.en}</span>
+                    </div>
+                    {craft.highlight && (
+                      <span className="inline-block text-xs bg-gray-900 text-white px-3 py-1 rounded-full mb-4">
+                        {craft.highlight}
+                      </span>
+                    )}
+                    <p className="text-gray-600 leading-relaxed">{craft.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Material Safety Data Cards */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">Material Safety</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
+              材料环保数据
+            </h2>
+            <p className="text-gray-500 mt-4">9 大核心材料已完成国家级实验室检测</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+              <div className="text-3xl font-serif font-bold text-gray-900 mb-1">0.008</div>
+              <div className="text-sm text-gray-500 mb-2">mg/m³</div>
+              <div className="text-xs font-medium text-gray-700 mb-1">板材甲醛 · ENF级</div>
+              <div className="text-xs text-gray-400">黄埔海关检测</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+              <div className="text-3xl font-serif font-bold text-gray-900 mb-1">19项</div>
+              <div className="text-sm text-gray-500 mb-2">全ND</div>
+              <div className="text-xs font-medium text-gray-700 mb-1">海绵重金属</div>
+              <div className="text-xs text-gray-400">SGS 通标检测</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+              <div className="text-3xl font-serif font-bold text-gray-900 mb-1">双十环</div>
+              <div className="text-sm text-gray-500 mb-2">认证</div>
+              <div className="text-xs font-medium text-gray-700 mb-1">胶水+布艺</div>
+              <div className="text-xs text-gray-400">生态环境部授权</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+              <div className="text-3xl font-serif font-bold text-gray-900 mb-1">未检出</div>
+              <div className="text-sm text-gray-500 mb-2">甲醛</div>
+              <div className="text-xs font-medium text-gray-700 mb-1">仿皮材料</div>
+              <div className="text-xs text-gray-400">A类（最严级）</div>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/safety" className="inline-flex items-center text-sm text-gray-900 border-b border-gray-300 pb-1 hover:border-gray-900 transition-colors">
+              查看完整材料安全报告 →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Statement */}
+      <section className="py-24 bg-gray-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8">
+            一丝一毫，分毫不差
+          </h2>
+          <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto mb-8">
+            是我们从源头就坚守的底线。
+          </p>
+          <p className="text-gray-500 leading-relaxed max-w-xl mx-auto">
+            高定从来不是说说而已，是一针一线，一皮一布，一点一滴的积累与坚持。
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+            了解更多
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/supply-chain" className="btn-primary">
+              供应链溯源
+            </Link>
+            <Link href="/showroom" className="btn-secondary">
+              了解展厅
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

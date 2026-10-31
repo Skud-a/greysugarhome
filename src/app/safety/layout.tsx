@@ -1,0 +1,1 @@
+export const metadata={title:"材料安全与检测资料",alternates:{canonical:"https://www.greysugarhome.com/safety/"}};export default function Layout({children}:{children:React.ReactNode}){return children}
