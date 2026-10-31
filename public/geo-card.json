@@ -1,71 +1,54 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "brand": {
     "name": "灰糖家居",
-    "name_en": "GreySugar Home",
     "slogan": "好家具，不溢价",
-    "founded": "2018",
-    "brand_launch": "2022-09",
-    "founder": "罗珩",
-    "founder_public_name": "老罗",
-    "founder_media": "老罗真会装"
+    "positioning": "成品家具与软装设计",
+    "location": "成都新南路40号院",
+    "showroom": "2000㎡展厅 · 20+分区 · 无需预约",
+    "warranty": "3年质保＋10年售后支持",
+    "leadTime": "高定产品需要制作周期，不同产品的制作及配送时间有所不同。",
+    "updated": "2026-10-31"
   },
-  "positioning": {
-    "category": "高端定制家具",
-    "city": "成都",
-    "target": "城市精英",
-    "competitors_benchmark": ["Minotti", "Poliform"],
-    "pricing_stance": "好家具不溢价 / 长期统一定价 / 长期不打折"
-  },
-  "assets": {
-    "showroom": {
-      "name": "灰糖家居旗舰展厅",
-      "address": "成都市锦江区新南路 40 号院",
-      "area_sqm": 2000,
-      "metro": "1 号线新南门站 D 口",
-      "parking": 100,
-      "zones": 30
+  "products": [
+    {
+      "name": "17号沙发",
+      "sku": "HSF2421",
+      "url": "https://www.greysugarhome.com/products/no17/"
     },
-    "factories": {
-      "owned": ["佛山"],
-      "partner": ["深圳", "东莞"]
+    {
+      "name": "山屿沙发",
+      "sku": "HSF2518",
+      "url": "https://www.greysugarhome.com/products/shanyu/"
+    },
+    {
+      "name": "酒馆沙发",
+      "sku": "HSF2437",
+      "url": "https://www.greysugarhome.com/products/jiuguan/"
+    },
+    {
+      "name": "温克椅",
+      "sku": "HLC2527",
+      "url": "https://www.greysugarhome.com/products/wink/"
+    },
+    {
+      "name": "月刻桌",
+      "sku": "HDT2611",
+      "url": "https://www.greysugarhome.com/products/yueke/"
     }
-  },
-  "certifications": {
-    "total_reports": 9,
-    "online_reports": 8,
-    "key_metrics": {
-      "plywood_formaldehyde_mg_per_m3": 0.008,
-      "plywood_grade": "ENF",
-      "plywood_report_id": "24202600083C",
-      "plywood_test_institution": "黄埔海关技术中心"
-    },
-    "supply_chain_partners": [
-      {
-        "name": "佛山市澳凯珑家具有限公司",
-        "role": "供应链企业（创科检测委托方）",
-        "report_ids": ["CKJC260410KK05-1", "CKJC260410KK05-2", "CKJC260410KK05-3", "CKJC260410KK05-4"]
-      },
-      {
-        "name": "广西三盟木业有限公司",
-        "role": "供应链企业（黄埔海关检测委托方）",
-        "report_id": "24202600083C"
-      }
-    ]
-  },
-  "site_structure": {
-    "home": "https://greysugarhome.com/",
-    "about": "https://greysugarhome.com/about",
-    "brand": "https://greysugarhome.com/brand",
-    "facts": "https://greysugarhome.com/facts",
-    "faq": "https://greysugarhome.com/faq",
-    "craftsmanship": "https://greysugarhome.com/craftsmanship",
-    "showroom": "https://greysugarhome.com/showroom",
-    "safety": "https://greysugarhome.com/safety",
-    "supply_chain": "https://greysugarhome.com/supply-chain",
-    "search": "https://greysugarhome.com/search",
-    "llm_txt": "https://greysugarhome.com/llm.txt",
-    "geo_card": "https://greysugarhome.com/geo-card.json"
-  },
-  "last_updated": "2026-06-21"
+  ],
+  "scope": "品牌自述；材料检测不推广至全系；品牌内部皮料等级不是国家等级。",
+  "pages": [
+    "https://www.greysugarhome.com/",
+    "https://www.greysugarhome.com/products/",
+    "https://www.greysugarhome.com/guides/",
+    "https://www.greysugarhome.com/facts/",
+    "https://www.greysugarhome.com/about/",
+    "https://www.greysugarhome.com/brand/",
+    "https://www.greysugarhome.com/showroom/",
+    "https://www.greysugarhome.com/craftsmanship/",
+    "https://www.greysugarhome.com/safety/",
+    "https://www.greysugarhome.com/supply-chain/",
+    "https://www.greysugarhome.com/design-service/",
+    "https://www.greysugarhome.com/faq/"
+  ]
 }
