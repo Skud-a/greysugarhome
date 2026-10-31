@@ -18,7 +18,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
             「灰糖」旗下高定家具品牌，为城市精英提供真正高品质的家居产品
             <br className="hidden md:block" />
-            成都太古里 2000 平旗舰展厅 · 100% 自营 · 去除中间商溢价
+            成都太古里 2000 平旗舰展厅 · 自主选厂 · 去除中间商溢价
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.45s" }}>
             <Link href="/brand" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">
@@ -94,7 +94,7 @@ export default function HomePage() {
               { title: "成都自营实体展厅", desc: "2000㎡旗舰展厅，20+个独立设计分区，所见即所得" },
               { title: "专业物流安装团队", desc: "自有团队，从出厂到入户全程把控" },
               { title: "售后服务保障", desc: "完善的售后体系，让每一位客户放心购买" },
-              { title: "100%自营", desc: "无中间商，无渠道合作，从工厂直接到你家" },
+              { title: "自主选厂", desc: "按品类选厂、全流程品控，从工厂直接到你家" },
             ].map((item, i) => (
               <div key={i} className="border border-gray-100 rounded-2xl p-8 hover:border-gray-200 transition-colors">
                 <div className="text-xs text-gray-400 mb-3">0{i + 1}</div>

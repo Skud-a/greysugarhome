@@ -147,7 +147,7 @@ export default function FactsPage() {
           <div className="mb-6 bg-gray-50 rounded-xl p-5 border border-gray-100">
             <span className="text-sm text-gray-400">三大基地</span>
             <p className="text-gray-900 mt-1">
-              佛山自有工厂 + 深圳/东莞工厂深度合作直供（100% 自营产品）
+              佛山核心产区 + 深圳/东莞专项工厂按品类承接，全流程由灰糖品控
             </p>
           </div>
           <div className="space-y-3">
@@ -224,8 +224,8 @@ export default function FactsPage() {
           <div className="space-y-3">
             {[
               "长期统一定价 —— 价格稳定，对所有顾客一视同仁",
-              "100% 自营展厅、自营物流安装、自营售后",
-              "佛山自有工厂 + 深圳/东莞工厂直供，去掉中间环节",
+              "自营展厅、自营物流安装、自营售后",
+              "佛山、深圳、东莞三地工厂按品类承接，去掉中间环节",
               "9 大高定工艺统一执行",
               "120000 公里供应链亲自飞行验厂",
             ].map((promise, i) => (

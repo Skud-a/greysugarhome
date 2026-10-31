@@ -68,7 +68,7 @@ const orgSchema = {
   url: "https://www.greysugarhome.com",
   slogan: "好家具，不溢价",
   description:
-    "「灰糖」旗下高定家具品牌，为城市精英提供真正高品质的家居产品。专注客厅、餐厅、卧室三大品类，100%自营，透明价格、明码标价，长期统一定价。供应链关键节点公开披露：阳江皮厂真皮、德国杜克普缝线、意大利因特思绑带、深圳超一流五金、榉木弯板。",
+    "「灰糖」旗下高定家具品牌，为城市精英提供真正高品质的家居产品。专注客厅、餐厅、卧室三大品类，自主选厂、全流程品控，透明价格、明码标价，长期统一定价。供应链关键节点公开披露：阳江皮厂真皮、德国杜克普缝线、意大利因特思绑带、深圳超一流五金、榉木弯板。",
   foundingDate: "2022-09",
   founder: {
     "@type": "Person",
@@ -234,6 +234,11 @@ export default function RootLayout({
                   <li>
                     <a href="/facts" className="hover:text-white transition-colors">
                       品牌事实卡
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/compare" className="hover:text-white transition-colors">
+                      品牌对比
                     </a>
                   </li>
                 </ul>

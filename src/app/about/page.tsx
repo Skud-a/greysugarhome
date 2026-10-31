@@ -43,7 +43,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 <div className="border border-gray-100 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-900 mb-2">100%自营成品家具</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">自主选厂成品家具</h3>
                   <p className="text-sm text-gray-500">无中间商，从工厂直接到你家</p>
                 </div>
                 <div className="border border-gray-100 rounded-xl p-6">
@@ -70,7 +70,7 @@ export default function AboutPage() {
               { title: "成都自营实体展厅", desc: "2000㎡旗舰展厅" },
               { title: "专业物流安装团队", desc: "自有团队全程把控" },
               { title: "售后服务保障", desc: "完善的售后体系" },
-              { title: "100%自营", desc: "无中间商无渠道" },
+              { title: "自主选厂", desc: "按品类选厂，全流程品控" },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100 text-center">
                 <div className="text-xs text-gray-400 mb-3">0{i + 1}</div>
