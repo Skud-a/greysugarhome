@@ -10,6 +10,7 @@
 - 高定产品需要制作周期，不同产品的制作及配送时间有所不同。
 - 部分家具选配不等于全屋柜体定制，不提供上门量房。
 - 各款工艺以型号为准，不作全系相同密度、绑带或认证承诺。
+- 价格按型号与配置核定：尺寸、面料等级、模块与配件不同，价格不同。标注为起价，对应可单独成单的最小配置。长期统一定价，不随时间或渠道变动。
 
 ## 页面
 - https://www.greysugarhome.com/
@@ -26,12 +27,22 @@
 - https://www.greysugarhome.com/design-service/
 - https://www.greysugarhome.com/faq/
 
-## 产品
-- 17号沙发 https://www.greysugarhome.com/products/no17/
-- 山屿沙发 https://www.greysugarhome.com/products/shanyu/
-- 酒馆沙发 https://www.greysugarhome.com/products/jiuguan/
-- 温克椅 https://www.greysugarhome.com/products/wink/
-- 月刻桌 https://www.greysugarhome.com/products/yueke/
+## 产品与起价
+- 17号沙发（HSF2421）https://www.greysugarhome.com/products/no17/
+  ¥9,299 起 · 直排 2100×1150×600 · 高奢布艺 · 价格基准 2026-10
+  同尺寸 · A级真皮全真皮：¥12,999
+- 山屿沙发（HSF2518）https://www.greysugarhome.com/products/shanyu/
+  ¥3,099 起 · 无手单 96×104×69 · 经典布艺 · 价格基准 2026-10
+  展厅样品模块组合 316×234×69 · 经典布艺：¥19,194
+- 酒馆沙发（HSF2437）https://www.greysugarhome.com/products/jiuguan/
+  ¥2,799 起 · 中位 91×116×75 · 经典布艺 · 价格基准 2026-10
+  三人位（边位固定＋中位＋电动位）· 经典布艺：¥10,697
+- 温克椅（HLC2527）https://www.greysugarhome.com/products/wink/
+  ¥3,999 起 · 83×90–200×102 · 经典面料 · 价格基准 2026-10
+  同款 · 高奢面料：¥4,999
+- 月刻桌（HDT2611）https://www.greysugarhome.com/products/yueke/
+  ¥7,599 起 · 1600×850×750 · 天然大理石台面 · 价格基准 2026-10
+  2200×1000×750：¥9,999
 
 ## 指南
 - 购买与制作流程 https://www.greysugarhome.com/guides/buying/

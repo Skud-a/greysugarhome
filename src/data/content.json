@@ -7,7 +7,8 @@
     "showroom": "2000㎡展厅 · 20+分区 · 无需预约",
     "warranty": "3年质保＋10年售后支持",
     "leadTime": "高定产品需要制作周期，不同产品的制作及配送时间有所不同。",
-    "updated": "2026-10-31"
+    "updated": "2026-10-31",
+    "priceNote": "价格按型号与配置核定：尺寸、面料等级、模块与配件不同，价格不同。标注为起价，对应可单独成单的最小配置。长期统一定价，不随时间或渠道变动。"
   },
   "products": [
     {
@@ -17,6 +18,16 @@
       "category": "客厅",
       "tagline": "直线条里的柔和与松弛",
       "description": "模块组合与靠包设计，让沙发适应不同的坐卧习惯。",
+      "price": {
+        "from": 9299,
+        "fromConfig": "直排 2100×1150×600 · 高奢布艺",
+        "basis": "2026-10",
+        "offerCount": 7,
+        "reference": {
+          "label": "同尺寸 · A级真皮全真皮",
+          "value": 12999
+        }
+      },
       "tip": "优先关注模块组合、靠包支撑与空间比例。",
       "image": "/images/products/no17.webp",
       "source": "http://mp.weixin.qq.com/s?__biz=MzAwOTg5MjIyOA==&mid=2247720695&idx=1&sn=362369d4e4aa8f0ad5587b3ce92ecabf",
@@ -29,6 +40,16 @@
       "category": "客厅",
       "tagline": "面向生活的两侧",
       "description": "岛式与模块组合，为横厅中的交流与休息提供更多布局思路。",
+      "price": {
+        "from": 3099,
+        "fromConfig": "无手单 96×104×69 · 经典布艺",
+        "basis": "2026-10",
+        "offerCount": 13,
+        "reference": {
+          "label": "展厅样品模块组合 316×234×69 · 经典布艺",
+          "value": 19194
+        }
+      },
       "tip": "核对前后通道、模块布局与头枕配置。",
       "image": "/images/products/shanyu.webp",
       "source": "http://mp.weixin.qq.com/s?__biz=MzAwOTg5MjIyOA==&mid=2247731809&idx=1&sn=78cd2919e4ca81b257bdf2c44789d54b&chksm=9b55b28aac223b9c3206dc94b2a8cc8a6fce2aa6fad35cfceabab8ac40942b6c6186e76f4574",
@@ -41,6 +62,16 @@
       "category": "客厅",
       "tagline": "从会客到舒展",
       "description": "低靠背与宽扶手的功能沙发，兼顾日常坐用和躺卧场景。",
+      "price": {
+        "from": 2799,
+        "fromConfig": "中位 91×116×75 · 经典布艺",
+        "basis": "2026-10",
+        "offerCount": 4,
+        "reference": {
+          "label": "三人位（边位固定＋中位＋电动位）· 经典布艺",
+          "value": 10697
+        }
+      },
       "tip": "同时核对收起与展开尺寸、供电位置和功能位配置。",
       "image": "/images/products/jiuguan.webp",
       "source": "http://mp.weixin.qq.com/s?__biz=MzAwOTg5MjIyOA==&mid=2247711520&idx=1&sn=de275cefe8a16f467f30c9c326ecdcb5&chksm=9b5543cbac22cadd9b29097b746cf7dbaf2b2dfb0dbdc08133782d7eb7860505f58d3c5cb475",
@@ -53,6 +84,16 @@
       "category": "客厅",
       "tagline": "让休息多一种姿态",
       "description": "有辨识度的单人休闲椅，为阅读、休息与空间搭配提供灵活选择。",
+      "price": {
+        "from": 3999,
+        "fromConfig": "83×90–200×102 · 经典面料",
+        "basis": "2026-10",
+        "offerCount": 2,
+        "reference": {
+          "label": "同款 · 高奢面料",
+          "value": 4999
+        }
+      },
       "tip": "预留调节后的使用空间，并确认面料与配色。",
       "image": "/images/products/wink.webp",
       "source": "http://mp.weixin.qq.com/s?__biz=MzAwOTg5MjIyOA==&mid=2247733020&idx=1&sn=4b179909d7b511be80106175a528f9c2&chksm=9b55b7f7ac223ee1547f607585874c41a5907f07a1730700e76729b7e1fdf00d8da889f4fa0c",
@@ -65,6 +106,16 @@
       "category": "餐厅",
       "tagline": "把日常留给相聚",
       "description": "石材、木皮与金属细节组合的餐桌，关注桌面之外的连接和底部工艺。",
+      "price": {
+        "from": 7599,
+        "fromConfig": "1600×850×750 · 天然大理石台面",
+        "basis": "2026-10",
+        "offerCount": 4,
+        "reference": {
+          "label": "2200×1000×750",
+          "value": 9999
+        }
+      },
       "tip": "核对桌面尺寸、餐椅活动空间与石材护理要求。",
       "image": "/images/products/yueke.webp",
       "source": "http://mp.weixin.qq.com/s?__biz=MzAwOTg5MjIyOA==&mid=2247740388&idx=1&sn=427d335eaade2f3e232f058e89772374&chksm=9b55d30fac225a197ed5d8c4ee6ad28c4475a8959e67669f87f48370127e5f7707040210473c",

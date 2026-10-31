@@ -7,33 +7,54 @@
     "showroom": "2000㎡展厅 · 20+分区 · 无需预约",
     "warranty": "3年质保＋10年售后支持",
     "leadTime": "高定产品需要制作周期，不同产品的制作及配送时间有所不同。",
-    "updated": "2026-10-31"
+    "updated": "2026-10-31",
+    "priceNote": "价格按型号与配置核定：尺寸、面料等级、模块与配件不同，价格不同。标注为起价，对应可单独成单的最小配置。长期统一定价，不随时间或渠道变动。"
   },
   "products": [
     {
       "name": "17号沙发",
       "sku": "HSF2421",
-      "url": "https://www.greysugarhome.com/products/no17/"
+      "url": "https://www.greysugarhome.com/products/no17/",
+      "priceFrom": 9299,
+      "priceCurrency": "CNY",
+      "priceNote": "直排 2100×1150×600 · 高奢布艺",
+      "priceBasis": "2026-10"
     },
     {
       "name": "山屿沙发",
       "sku": "HSF2518",
-      "url": "https://www.greysugarhome.com/products/shanyu/"
+      "url": "https://www.greysugarhome.com/products/shanyu/",
+      "priceFrom": 3099,
+      "priceCurrency": "CNY",
+      "priceNote": "无手单 96×104×69 · 经典布艺",
+      "priceBasis": "2026-10"
     },
     {
       "name": "酒馆沙发",
       "sku": "HSF2437",
-      "url": "https://www.greysugarhome.com/products/jiuguan/"
+      "url": "https://www.greysugarhome.com/products/jiuguan/",
+      "priceFrom": 2799,
+      "priceCurrency": "CNY",
+      "priceNote": "中位 91×116×75 · 经典布艺",
+      "priceBasis": "2026-10"
     },
     {
       "name": "温克椅",
       "sku": "HLC2527",
-      "url": "https://www.greysugarhome.com/products/wink/"
+      "url": "https://www.greysugarhome.com/products/wink/",
+      "priceFrom": 3999,
+      "priceCurrency": "CNY",
+      "priceNote": "83×90–200×102 · 经典面料",
+      "priceBasis": "2026-10"
     },
     {
       "name": "月刻桌",
       "sku": "HDT2611",
-      "url": "https://www.greysugarhome.com/products/yueke/"
+      "url": "https://www.greysugarhome.com/products/yueke/",
+      "priceFrom": 7599,
+      "priceCurrency": "CNY",
+      "priceNote": "1600×850×750 · 天然大理石台面",
+      "priceBasis": "2026-10"
     }
   ],
   "scope": "品牌自述；材料检测不推广至全系；品牌内部皮料等级不是国家等级。",

@@ -38,7 +38,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-<section className="py-20 bg-white"><div className="max-w-6xl mx-auto px-4"><h2 className="text-3xl font-serif font-bold mb-10">具体产品资料</h2><div className="grid md:grid-cols-3 gap-8">{products.map(p=><Link key={p.slug} href={'/products/'+p.slug+'/'} className="block"><img src={p.image} alt={p.name+'实拍'} className="w-full h-72 object-cover rounded-xl"/><p className="text-xs text-gray-500 mt-4">{p.sku}</p><h3 className="text-xl font-semibold mt-2">{p.name}</h3><p className="text-gray-600 mt-3">{p.description}</p></Link>)}</div></div></section>
+<section className="py-20 bg-white"><div className="max-w-6xl mx-auto px-4"><h2 className="text-3xl font-serif font-bold mb-10">具体产品资料</h2><div className="grid md:grid-cols-3 gap-8">{products.map(p=><Link key={p.slug} href={'/products/'+p.slug+'/'} className="block"><img src={p.image} alt={p.name+'实拍'} className="w-full h-72 object-cover rounded-xl"/><p className="text-xs text-gray-500 mt-4">{p.sku}</p><h3 className="text-xl font-semibold mt-2">{p.name}</h3><p className="text-sm text-gray-800 mt-2">¥{p.price.from.toLocaleString('en-US')} 起</p><p className="text-xs text-gray-400 mt-1">{p.price.fromConfig}</p><p className="text-gray-600 mt-3">{p.description}</p></Link>)}</div><p className="text-xs text-gray-400 mt-8">价格为 2026 年 10 月基准，按型号与配置分别核定，标注为起价。</p></div></section>
       {/* Categories */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4">
