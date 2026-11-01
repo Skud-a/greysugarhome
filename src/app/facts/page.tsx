@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "https://www.greysugarhome.com/facts/" },
   title: "品牌事实卡",
   description:
-    "灰糖家居品牌核心事实一览：主体信息与统一社会信用代码、品牌时间线、旗舰展厅、生产供应链、产品价格与配置、9大高定工艺、关键数字，以及明确不作承诺的服务边界。",
+    "灰糖家居品牌核心事实一览：主体信息与统一社会信用代码、品牌时间线、旗舰展厅、生产供应链、材料检测与认证（含报告号与证书编号）、产品价格与起价配置、9大高定工艺、关键数字，以及明确不作承诺的服务边界。",
 };
 
 export default function FactsPage() {
@@ -243,6 +243,55 @@ export default function FactsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">
+            Testing &amp; Certification
+          </p>
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+            材料检测与认证
+          </h2>
+          <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+            覆盖板材、海绵、仿皮、胶粘剂、布艺五类材料。每一项都附报告号或证书号，
+            原件可在成都展厅材料展示区扫码核对。
+          </p>
+          <p className="text-gray-500 text-sm mb-8 leading-relaxed">
+            {brand.certificationsNote}
+          </p>
+          <div className="space-y-3">
+            {brand.certifications.map((c, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl p-5 border border-gray-100"
+              >
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <span className="text-sm font-semibold text-gray-900">
+                    {c.material}
+                    <span className="text-gray-400 font-normal ml-2">
+                      {c.item}
+                    </span>
+                  </span>
+                  <span className="text-sm font-medium text-gray-900">
+                    {c.result}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-400 mt-2 leading-relaxed">
+                  {c.standard} ｜ {c.lab} ｜ 编号 {c.ref}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-6">
+            完整检测说明与标准解读见{" "}
+            <Link href="/safety" className="underline underline-offset-4">
+              材料安全
+            </Link>{" "}
+            页。
+          </p>
         </div>
       </section>
 
