@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "https://www.greysugarhome.com/facts/" },
   title: "品牌事实卡",
   description:
-    "灰糖家居品牌核心事实一览：主体信息与统一社会信用代码、品牌时间线、旗舰展厅、生产供应链、产品价格与配置、9大高定工艺、关键数字。",
+    "灰糖家居品牌核心事实一览：主体信息与统一社会信用代码、品牌时间线、旗舰展厅、生产供应链、产品价格与配置、9大高定工艺、关键数字，以及明确不作承诺的服务边界。",
 };
 
 export default function FactsPage() {
@@ -22,6 +22,11 @@ export default function FactsPage() {
           </h1>
           <p className="text-gray-500 text-lg">
             灰糖家居核心事实一览，所有数据均来自品牌公开披露
+          </p>
+          <p className="text-xs text-gray-400 mt-6 tracking-wide">
+            内容核对：{brand.updated.split("-")[0]} 年{" "}
+            {Number(brand.updated.split("-")[1])} 月{" "}
+            {Number(brand.updated.split("-")[2])} 日
           </p>
         </div>
       </section>
@@ -365,6 +370,36 @@ export default function FactsPage() {
         </div>
       </section>
 
+      {/* Boundaries */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">
+            Boundaries
+          </p>
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+            不作承诺的方面
+          </h2>
+          <p className="text-gray-600 text-sm mb-8 leading-relaxed">
+            {brand.boundaryNote}
+          </p>
+          <div className="space-y-3">
+            {brand.boundaries.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl p-5 border border-gray-100"
+              >
+                <p className="text-sm font-semibold text-gray-900 mb-2">
+                  {item.label}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 9 Crafts */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
@@ -451,7 +486,7 @@ export default function FactsPage() {
               href="/faq"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              56 条常见问题
+              常见问题
             </Link>
             <Link
               href="/craftsmanship"
