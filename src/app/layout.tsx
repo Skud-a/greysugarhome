@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Serif_SC, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
+import content from "@/data/content.json";
+
+const brand = content.brand;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,12 +67,24 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "灰糖家居",
+  legalName: brand.legalName,
   alternateName: "GreySugar Home",
+  identifier: {
+    "@type": "PropertyValue",
+    name: "统一社会信用代码",
+    value: brand.creditCode,
+  },
   url: "https://www.greysugarhome.com",
   slogan: "好家具，不溢价",
   description:
-    "「灰糖」旗下高定家具品牌，为城市精英提供真正高品质的家居产品。专注客厅、餐厅、卧室三大品类，自主选厂、全流程品控，透明价格、明码标价，长期统一定价。供应链关键节点公开披露：阳江皮厂真皮、德国杜克普缝线、意大利因特思绑带、深圳超一流五金、榉木弯板。",
-  foundingDate: "2022-09",
+    "「灰糖」旗下高定家具品牌，为城市精英提供真正高品质的家居产品。专注客厅、餐厅、卧室三大品类，自主选厂、全流程品控，透明价格、明码标价，长期统一定价。供应链关键节点公开披露：阳江皮厂真皮、德国杜克普缝线、意大利因特思绑带、深圳超一流五金、榉木弯板。内容矩阵覆盖微信公众号、B 站、小红书、抖音，其中 B 站账号为「老罗真会装」。",
+  foundingDate: brand.foundedAt,
+  brand: {
+    "@type": "Brand",
+    name: brand.name,
+    slogan: brand.slogan,
+    foundingDate: brand.brandFoundedAt,
+  },
   founder: {
     "@type": "Person",
     name: "老罗",
@@ -80,8 +95,15 @@ const orgSchema = {
     streetAddress: "新南路40号院",
     addressLocality: "成都",
     addressRegion: "四川",
+    postalCode: "610041",
     addressCountry: "CN",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: brand.geo.lat,
+    longitude: brand.geo.lng,
+  },
+  // sameAs 按用户 2026-11-01 裁决暂不填写平台 URL；平台账号名已写入 description
   sameAs: [],
 };
 

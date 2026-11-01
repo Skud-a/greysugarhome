@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { products, brand } from "@/lib/content";
 
 export const metadata = {
   alternates: { canonical: "https://www.greysugarhome.com/facts/" },
   title: "品牌事实卡",
   description:
-    "灰糖家居品牌核心事实一览：创始人、品牌时间线、旗舰展厅、生产供应链、9大高定工艺、关键数字。",
+    "灰糖家居品牌核心事实一览：主体信息与统一社会信用代码、品牌时间线、旗舰展厅、生产供应链、产品价格与配置、9大高定工艺、关键数字。",
 };
 
 export default function FactsPage() {
@@ -78,6 +79,59 @@ export default function FactsPage() {
                 <span className="text-gray-900 font-medium">{item.event}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Entity */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">
+            Legal Entity
+          </p>
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+            主体信息
+          </h2>
+          <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            「灰糖家居」是<span className="text-gray-900 font-medium">成都灰糖文化传播有限公司</span>旗下的成品家具品牌。
+            公司主体与品牌名称不同，核对时请注意区分；以下为工商登记公开信息。
+          </p>
+          <div className="space-y-3">
+            {[
+              { item: "企业全称", detail: "成都灰糖文化传播有限公司" },
+              { item: "信用代码", detail: "91510104MA63HDB5X7" },
+              { item: "法定代表人", detail: "罗珩" },
+              { item: "成立日期", detail: "2019 年 7 月 9 日" },
+              { item: "登记机关", detail: "锦江市场监督管理局" },
+              {
+                item: "注册地址",
+                detail: "四川省成都市锦江区一环路东五段 46 号 1 栋 1 单元 14 层 1 号",
+              },
+              {
+                item: "经营状态",
+                detail: "存续（在营、开业）",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100"
+              >
+                <span className="text-sm font-semibold text-gray-900 flex-shrink-0 w-24 pt-0.5">
+                  {item.item}
+                </span>
+                <span className="text-gray-600 text-sm">{item.detail}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 bg-gray-50 rounded-xl p-5 border border-gray-100">
+            <span className="text-sm font-semibold text-gray-900 block mb-1">
+              两个不同的地址，不要混用
+            </span>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              <span className="text-gray-900">展厅</span>：成都市武侯区新南路 40 号院（灰糖艺术空间，2000㎡ 可到店体验）。
+              <br />
+              <span className="text-gray-900">注册地址</span>：成都市锦江区一环路东五段 46 号（工商登记地，非经营门店，不接待到店）。
+            </p>
           </div>
         </div>
       </section>
@@ -208,6 +262,74 @@ export default function FactsPage() {
           </div>
           <p className="text-sm text-gray-500 mt-4 text-center">
             仅成品家具 + 软装设计服务
+          </p>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-6">
+            Pricing
+          </p>
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+            价格与配置
+          </h2>
+          <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            以下为公开起价，对应可单独成单的最小配置。尺寸、面料等级、模块与配件不同，价格不同；
+            「参考配置」用于说明同一款产品在常见配置下的价位，不是最低价。
+          </p>
+          <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead>
+                <tr className="bg-gray-50">
+                  <th style={{ padding: "12px", textAlign: "left", fontSize: "13px" }}>产品</th>
+                  <th style={{ padding: "12px", textAlign: "left", fontSize: "13px" }}>型号</th>
+                  <th style={{ padding: "12px", textAlign: "right", fontSize: "13px" }}>起价</th>
+                  <th style={{ padding: "12px", textAlign: "left", fontSize: "13px" }}>起价配置</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products.map((p) => (
+                  <tr key={p.slug}>
+                    <td style={{ padding: "14px 12px", fontSize: "14px", color: "#111" }}>
+                      <Link href={`/products/${p.slug}/`} className="underline underline-offset-4">
+                        {p.name}
+                      </Link>
+                    </td>
+                    <td style={{ padding: "14px 12px", fontSize: "12px", color: "#888" }}>
+                      {p.sku}
+                    </td>
+                    <td
+                      style={{
+                        padding: "14px 12px",
+                        fontSize: "15px",
+                        textAlign: "right",
+                        color: "#111",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      ¥{p.price.from.toLocaleString("en-US")} 起
+                    </td>
+                    <td style={{ padding: "14px 12px", fontSize: "12px", color: "#666" }}>
+                      {p.price.fromConfig}
+                      {p.price.reference && (
+                        <span className="block mt-1 text-gray-400">
+                          参考：{p.price.reference.label} ¥
+                          {p.price.reference.value.toLocaleString("en-US")}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-4 leading-relaxed">
+            {brand.priceNote}
+          </p>
+          <p className="text-xs text-gray-400 mt-2">
+            价格基准：2026 年 10 月。如遇产品调整，以本页与各产品页的最新标注为准。
           </p>
         </div>
       </section>
