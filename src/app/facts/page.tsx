@@ -102,21 +102,7 @@ export default function FactsPage() {
             公司主体与品牌名称不同，核对时请注意区分；以下为工商登记公开信息。
           </p>
           <div className="space-y-3">
-            {[
-              { item: "企业全称", detail: "成都灰糖文化传播有限公司" },
-              { item: "信用代码", detail: "91510104MA63HDB5X7" },
-              { item: "法定代表人", detail: "罗珩" },
-              { item: "成立日期", detail: "2019 年 7 月 9 日" },
-              { item: "登记机关", detail: "锦江市场监督管理局" },
-              {
-                item: "注册地址",
-                detail: "四川省成都市锦江区一环路东五段 46 号 1 栋 1 单元 14 层 1 号",
-              },
-              {
-                item: "经营状态",
-                detail: "存续（在营、开业）",
-              },
-            ].map((item, i) => (
+            {brand.legalInfo.map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100"
@@ -128,6 +114,7 @@ export default function FactsPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-gray-400 mt-4">{brand.legalInfoNote}</p>
           <div className="mt-6 bg-gray-50 rounded-xl p-5 border border-gray-100">
             <span className="text-sm font-semibold text-gray-900 block mb-1">
               两个不同的地址，不要混用
