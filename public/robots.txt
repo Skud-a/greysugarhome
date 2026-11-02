@@ -1,3 +1,62 @@
+# 灰糖家居官网 · greysugarhome.com
+# 策略：全站对搜索引擎与 AI 检索爬虫开放，仅屏蔽站内搜索结果页（动态 URL，无收录价值）
+
 User-agent: *
 Allow: /
+Disallow: /search
+
+# —— AI 检索爬虫：显式允许，避免上游 CDN / WAF 默认拦截 ——
+
+User-agent: GPTBot
+Allow: /
+Disallow: /search
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /search
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /search
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /search
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /search
+
+User-agent: Claude-User
+Allow: /
+Disallow: /search
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /search
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /search
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /search
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /search
+
+User-agent: Bytespider
+Allow: /
+Disallow: /search
+
+User-agent: CCBot
+Allow: /
+Disallow: /search
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /search
+
 Sitemap: https://www.greysugarhome.com/sitemap.xml
