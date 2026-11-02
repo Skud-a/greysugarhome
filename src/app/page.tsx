@@ -183,7 +183,7 @@ export default function HomePage() {
               材料安全 · 透明可查
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              9 大核心材料已完成国家级实验室检测，数据全部来自检测报告原文
+              8 份核心材料已完成国家级实验室检测，数据全部来自检测报告原文
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

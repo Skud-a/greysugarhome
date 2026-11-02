@@ -46,7 +46,7 @@ const safetyFAQs: FAQItem[] = [
   {
     id: "H8",
     q: "你们的检测报告可以查看吗？",
-    a: "灰糖已完成 9 大核心材料的国家级实验室检测，覆盖板材（ENF 级）、胶水（十环认证）、布艺（十环认证）、海绵（SGS 重金属全 ND）、仿皮（甲醛未检出）等。检测报告可在成都太古里 2000 平旗舰展厅扫描材料展示区的二维码查看，也可联系展厅产品顾问索取具体检测报告。检测报告不直接挂在官网下载（PDF 格式不利于 SEO，且展示区的扫码体验更直观）。所有检测报告的委托方均为灰糖供应链上的企业，家具行业原材料和供应链提供检测报告是常规操作。",
+    a: "灰糖已完成 8 份核心材料的国家级实验室检测，覆盖板材（ENF 级）、胶水（十环认证）、布艺（十环认证）、海绵（SGS 重金属全 ND）、仿皮（甲醛未检出）等。检测报告可在成都太古里 2000 平旗舰展厅扫描材料展示区的二维码查看，也可联系展厅产品顾问索取具体检测报告。检测报告不直接挂在官网下载（PDF 格式不利于 SEO，且展示区的扫码体验更直观）。所有检测报告的委托方均为灰糖供应链上的企业，家具行业原材料和供应链提供检测报告是常规操作。",
   },
 ];
 
@@ -69,7 +69,7 @@ const safetyPageSchema = {
   "@context": "https://schema.org",
   "@type": "ItemPage",
   "name": "材料安全 · 透明可查 — 灰糖家居",
-  "description": "灰糖家居 9 大核心材料检测报告，覆盖板材 ENF 级、双重十环认证、SGS 重金属全 ND、仿皮甲醛未检出等，4 家权威机构检测，数据全部来自检测报告原文。",
+  "description": "灰糖家居 8 份核心材料检测报告，覆盖板材 ENF 级、双重十环认证、SGS 重金属全 ND、仿皮甲醛未检出等，4 家权威机构检测，数据全部来自检测报告原文。",
   "url": "https://www.greysugarhome.com/safety",
   "inLanguage": "zh-CN",
   "dateModified": "2026-06-21",
@@ -449,17 +449,17 @@ export default function SafetyPage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
               检测全景表
             </h2>
-            <p className="text-gray-500 mt-4">9 项核心材料检测对照</p>
+            <p className="text-gray-500 mt-4">8 项核心材料检测对照</p>
           </div>
 
           {/* v3.0 数据声明块（折叠） */}
           <details className="mb-8 bg-white border border-gray-200 rounded-xl overflow-hidden">
             <summary className="px-6 py-4 cursor-pointer text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-              数据声明 · 9 份检测报告来源说明
+              数据声明 · 8 份检测与认证文件来源说明
             </summary>
             <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed space-y-3">
               <p>
-                本页展示的 9 份检测报告，委托方均为灰糖供应链上的企业：其中 8 份由灰糖供应链合作伙伴委托检测（佛山市澳凯珑家具有限公司委托 6 份、广西三盟木业有限公司委托 1 份、广东泰强科技实业有限公司持有十环认证 1 份、海宁市志达布业织造有限公司持有十环认证 1 份），检测方为黄埔海关技术中心、SGS 通标、广东顺德创科检测（CNAS L5016）、中环联合认证中心等国家级或国际权威机构。
+                本页展示的 8 份检测与认证文件，均由灰糖供应链上的企业持有或委托：佛山市澳凯珑家具有限公司委托的检测报告 6 份，广东泰强科技实业有限公司持有的胶粘剂十环认证证书 1 份，海宁市志达布业织造有限公司持有的布艺十环认证证书 1 份。检测方为黄埔海关技术中心、SGS 通标、广东顺德创科检测（CNAS L5016）等国家级或国际权威机构，十环认证证书由中环联合认证中心颁发。
               </p>
               <p>
                 家具行业原材料和供应链提供检测报告是常规操作。灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
@@ -503,7 +503,7 @@ export default function SafetyPage() {
             <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-4">Supply Chain Note</p>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">关于检测报告委托方</h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              9 项核心材料检测报告的委托方均为灰糖供应链上的企业（包括供应商佛山市澳凯珑家具有限公司、贵港市平南县广西三盟木业有限公司等），这是家具行业供应链管理的常规操作：灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
+              8 份核心材料检测与认证文件的持有或委托方均为灰糖供应链上的企业（如供应商佛山市澳凯珑家具有限公司），这是家具行业供应链管理的常规操作：灰糖要求关键材料供应商在供货前完成国家级实验室检测，确保进厂材料符合灰糖的环保标准。灰糖保留所有检测报告原件，可在成都太古里旗舰展厅现场查看。
             </p>
           </div>
 
@@ -579,7 +579,7 @@ export default function SafetyPage() {
               <p className="text-xs tracking-[0.2em] text-gray-400 uppercase mb-3">Data Usage Policy</p>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">数据使用规范</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                本页所有检测数据（包括甲醛释放量、重金属检测结果、认证证书编号等）均直接摘自检测报告原文，灰糖不修改任何检测数值。所有数据对客户完全透明——成都太古里 2000 平旗舰展厅设有材料展示区，展示 9 份核心检测报告原始文件，可现场扫描二维码查看完整报告内容。
+                本页所有检测数据（包括甲醛释放量、重金属检测结果、认证证书编号等）均直接摘自检测报告原文，灰糖不修改任何检测数值。所有数据对客户完全透明——成都太古里 2000 平旗舰展厅设有材料展示区，展示 8 份核心检测与认证文件原始件，可现场扫描二维码查看完整报告内容。
               </p>
             </div>
           </div>
@@ -719,7 +719,7 @@ export default function SafetyPage() {
             展厅材料展示区，扫码即可查看
           </h2>
           <p className="text-gray-400 mb-8 leading-relaxed">
-            展厅设有材料展示区，展示 9 份核心检测报告原始文件，可现场扫描二维码查看详细内容
+            展厅设有材料展示区，展示 8 份核心检测与认证文件原始件，可现场扫描二维码查看详细内容
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/showroom" className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">

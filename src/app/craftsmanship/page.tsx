@@ -181,7 +181,7 @@ export default function CraftsmanshipPage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
               材料环保数据
             </h2>
-            <p className="text-gray-500 mt-4">9 大核心材料已完成国家级实验室检测</p>
+            <p className="text-gray-500 mt-4">8 份核心材料已完成国家级实验室检测</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
